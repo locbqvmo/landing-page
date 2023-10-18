@@ -471,43 +471,27 @@ header {
     }
 
     .search-bar {
-      display: flex;
-      margin-bottom: 10px;
+      position: relative;
 
-      .icon {
-        height: 55px;
-        width: 40px;
-        line-height: 55px;
-        text-align: center;
-        font-size: 20px;
-        background: #eee;
-        border: 2px solid rgb(133, 133, 133);
-        border-right: 0px;
-        border-radius: 8px;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        img {
-          width: 24px;
-          height: 24px;
-          margin-left: auto;
-          margin-right: 0;
-        }
+      img {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 20px;
+        left: 15px;
       }
 
       input {
-        width: 500px;
+        width: 520px;
+        height: 55px;
         padding: 5px;
         font-size: 11pt;
         background: #eee;
-        border: 2px solid rgb(133, 133, 133);
+        border: 0px solid;
         border-left: 0px;
         border-radius: 8px;
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
+        padding-left: 45px;
+        margin-bottom: 10px;
       }
     }
 
@@ -792,6 +776,7 @@ header {
               margin: 0px;
               justify-content: center;
               align-items: center;
+              border-radius: 5px;
             }
 
             .heart:hover {
@@ -1247,6 +1232,11 @@ header {
           text-decoration: none;
           margin-top: 8px;
         }
+
+        a:hover {
+          background: #fff;
+          color: #0432df;
+        }
       }
     }
 
@@ -1273,6 +1263,14 @@ header {
           letter-spacing: -0.16px;
           text-decoration: none;
           margin-top: 8px;
+        }
+
+        a:hover {
+          color: white;
+          background-color: #1b4bff;
+          border: 2px solid #fff;
+          border-radius: 8px;
+          padding: 12.5px 22.5px;
         }
       }
     }
@@ -1338,8 +1336,8 @@ header {
         align-items: center;
         gap: 10px;
         border-radius: 8px;
-        border: 1px solid #EEE;
-        background: #FFF;
+        border: 1px solid #eee;
+        background: #fff;
 
         .double-quote {
           width: 40px;
@@ -1347,9 +1345,9 @@ header {
         }
 
         .text {
-          color: #4C526A;
+          color: #4c526a;
           text-align: center;
-          font-feature-settings: 'salt' on, 'liga' off;
+          font-feature-settings: "salt" on, "liga" off;
           font-family: $inter;
           font-size: 14px;
           font-style: normal;
@@ -1372,9 +1370,9 @@ header {
 
           h6 {
             align-self: stretch;
-            color: #020D37;
+            color: #020d37;
             text-align: center;
-            font-feature-settings: 'salt' on, 'liga' off;
+            font-feature-settings: "salt" on, "liga" off;
             font-family: $inter;
             font-size: 18px;
             font-style: normal;
@@ -1386,9 +1384,9 @@ header {
 
           p {
             align-self: stretch;
-            color:#ACAFB8;
+            color: #acafb8;
             text-align: center;
-            font-feature-settings: 'salt' on, 'liga' off;
+            font-feature-settings: "salt" on, "liga" off;
             font-family: $inter;
             font-size: 14px;
             font-style: normal;
@@ -1410,7 +1408,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
-  background: #020D37;
+  background: #020d37;
 
   .info {
     display: flex;
@@ -1425,8 +1423,8 @@ footer {
     }
 
     .text {
-      color: #ACAFB8;
-      font-feature-settings: 'salt' on, 'liga' off;
+      color: #acafb8;
+      font-feature-settings: "salt" on, "liga" off;
       font-family: $inter;
       font-size: 16px;
       font-style: normal;
@@ -1437,8 +1435,8 @@ footer {
     }
 
     .copyright {
-      color: #ACAFB8;
-      font-feature-settings: 'salt' on, 'liga' off;
+      color: #acafb8;
+      font-feature-settings: "salt" on, "liga" off;
       font-family: $inter;
       font-size: 14px;
       font-style: normal;
@@ -1457,8 +1455,8 @@ footer {
 
     h6 {
       margin: 0px;
-      color: #EEE;
-      font-feature-settings: 'salt' on, 'liga' off;
+      color: #eee;
+      font-feature-settings: "salt" on, "liga" off;
       font-family: $inter;
       font-size: 18px;
       font-style: normal;
@@ -1478,8 +1476,8 @@ footer {
 
       li {
         a {
-          color: #ACAFB8;
-          font-feature-settings: 'salt' on, 'liga' off;
+          color: #acafb8;
+          font-feature-settings: "salt" on, "liga" off;
           font-family: $inter;
           font-size: 16px;
           font-style: normal;
@@ -1487,6 +1485,11 @@ footer {
           line-height: 180%;
           letter-spacing: -0.8px;
           text-decoration: none;
+        }
+
+        a:hover {
+          color: white;
+          text-decoration: underline;
         }
       }
     }
