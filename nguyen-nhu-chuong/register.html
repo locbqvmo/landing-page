@@ -23,14 +23,14 @@
                 <div class="password">
                     <img class="password-icon" src="https://www.svgrepo.com/show/532323/lock-alt.svg" alt="password">
                     <input id="password" placeholder="Enter password" type="password">
-                    <button type="button" onclick="togglePassword()">
+                    <button type="button" onclick="togglePassword('password')">
                         <img src="https://www.svgrepo.com/show/12044/eye.svg" alt="">
                     </button>
                 </div>
                 <div class="re-password">
                     <img class="password-icon" src="https://www.svgrepo.com/show/532323/lock-alt.svg" alt="password">
-                    <input id="password" placeholder="Confirm password" type="password">
-                    <button type="button" onclick="togglePassword()">
+                    <input id="re-password" placeholder="Confirm password" type="password">
+                    <button type="button" onclick="togglePassword('re-password')">
                         <img src="https://www.svgrepo.com/show/12044/eye.svg" alt="">
                     </button>
                 </div>
@@ -39,12 +39,12 @@
             </form>
         </section>
         <script>
-            function togglePassword() {
-                let inputType = document.getElementById("password").type;
+            function togglePassword(id) {
+                let inputType = document.getElementById(id).type;
                 if (inputType === "password") {
-                    document.getElementById("password").type = "text";
+                    document.getElementById(id).type = "text";
                 }else {
-                    document.getElementById("password").type = "password"
+                    document.getElementById(id).type = "password"
                 }
             }
         </script>
