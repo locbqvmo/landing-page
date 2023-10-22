@@ -1,0 +1,168 @@
+@use "../../abstracts/" as abs;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html,
+body {
+  font-family: "Raleway", "Helvetica", sans-serif;
+  font-size: 16px;
+
+  #wrapper {
+    background: abs.$primary_white_color;
+    min-height: 100vh;
+  }
+}
+.container {
+  flex-direction: column;
+  max-width: 350px;
+
+  .login_wrapper_upper {
+    border: 1px solid rgb(219 219 219);
+
+    .login_wrapper_upper_title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .login_wrapper_upper_img {
+        width: 175px;
+        height: 51px;
+        background-image: url("../../images/instagram_label.png");
+        background-position: center 129px;
+      }
+    }
+
+    p {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+
+      a {
+        font-weight: 500;
+        color: rgb(0, 149, 246);
+        text-decoration: none;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        font-size: 0.75rem;
+        opacity: 0.95;
+        color: rgb(0, 55, 107);
+        text-decoration: none;
+      }
+
+      .login_wrapper_main {
+        display: flex;
+        flex-direction: column;
+
+        .login_btn {
+          background-color: abs.$background_sky_color;
+          width: 100%;
+
+          button {
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: abs.$primary_white_color;
+            width: 100%;
+            background-color: abs.$background_sky_color;
+            cursor: pointer;
+          }
+        }
+
+        button {
+          background-color: abs.$primary_white_color;
+        }
+
+        label {
+          display: flex;
+          position: relative;
+          align-items: center;
+          border: 1px solid #e5e7eb;
+          border-radius: 0.25rem;
+          min-height: 38px;
+          font-size: 0.75rem;
+
+          span {
+            position: absolute;
+            left: 0.5rem;
+            opacity: 0.8;
+            transition: all 0.2s;
+          }
+
+          .typing {
+            transform: scale(0.9) translateY(-0.75rem);
+            left: 5px;
+            margin-bottom: 0.25rem;
+          }
+
+          input {
+            min-width: 270px;
+            overflow: hidden;
+            outline: none;
+            background-color: rgb(250, 250, 250);
+            padding-top: 0.5rem;
+            // padding-top: 1rem;
+          }
+        }
+        .login_wrapper_main_underline {
+          flex: 1 1 0%;
+          height: 1px;
+          width: 1px;
+          background-color: rgb(219, 219, 219);
+        }
+
+        .login_wrapper_main_text {
+          text-transform: uppercase;
+        }
+
+        .login_wrapper_main_fb {
+          width: 16px;
+          height: 16px;
+          position: relative;
+          top: 3px;
+          display: inline-block;
+          background-position: -414px -259px;
+          background-image: url("../../images/instagramIcon.png");
+        }
+
+        .login_wrapper_main_fb-text {
+          color: #385185;
+          font-weight: 500;
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .login_wrapper_lower {
+    flex-direction: column;
+
+    p {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    a img {
+      height: 40px;
+    }
+  }
+}
