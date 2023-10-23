@@ -310,6 +310,10 @@ template {
   display: none;
 }
 
+:root {
+  --deep-blue: #0432DF;
+}
+
 * {
   font-family: Poppins;
 }
@@ -419,8 +423,8 @@ body .login-form form .password button img {
 }
 body .login-form form .login-btn {
   color: white;
-  border: 1px solid #0432df;
-  background: #0432df;
+  border: 1px solid var(--deep-blue);
+  background: var(--deep-blue);
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -430,4 +434,15 @@ body .login-form form .login-btn {
   border-radius: 15px;
   text-decoration: none;
   margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-color: white;
+  }
+  body .login-form {
+    width: 100%;
+    border-radius: 0px !important;
+    padding: 100px 0 0 0;
+  }
 }/*# sourceMappingURL=login.css.map */
