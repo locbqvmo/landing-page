@@ -1,0 +1,100 @@
+@use "../abstracts" as *;
+
+.cta {
+  padding: 135px $mobile 10px;
+
+  &__container {
+    margin: auto;
+    max-width: 921px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  &__image {
+    width: 81.9%;
+    max-width: 281px;
+    z-index: -1;
+    margin-bottom: -53px;
+  }
+
+  &__content {
+    background-color: $dark-purple;
+    text-align: center;
+    padding: 2.05em 1.9em 2.75em;
+    max-width: 514px;
+  }
+
+  &__heading {
+    margin-bottom: 0.47em;
+  }
+
+  &__description {
+    margin-bottom: 2.15em;
+  }
+}
+
+@include breakpoint(tablet) {
+  .cta {
+    padding: 167px $tablet 10px;
+
+    &__image {
+      align-self: flex-start;
+      width: 40.78%;
+      max-width: 374px;
+      margin-bottom: -130px;
+    }
+
+    &__content {
+      align-self: flex-end;
+      width: 74.6%;
+      max-width: 730px;
+      text-align: left;
+      padding: 3em 3.5em 4.25em;
+    }
+
+    &__heading {
+      margin-bottom: 0.5em;
+    }
+
+    &__description {
+      margin-bottom: 2.19em;
+    }
+  }
+}
+
+@include breakpoint(desktop) {
+  .cta {
+    padding: 242px $desktop 10px;
+
+    &__container {
+      max-width: 1476px;
+    }
+
+    &__image {
+      width: 42.9%;
+      max-width: 570px;
+      margin-bottom: -304px;
+    }
+
+    &__content {
+      width: 65.647%;
+      max-width: none;
+      padding: 3.52em 3.55em 4.427em;
+
+      &::after {
+        bottom: -72px;
+        right: 72px;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 0.59em;
+    }
+
+    &__description {
+      margin-bottom: 2.5em;
+    }
+  }
+}
