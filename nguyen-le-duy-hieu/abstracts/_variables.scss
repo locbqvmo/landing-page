@@ -1,0 +1,45 @@
+$basicStep: 0.25rem;
+$stepsAmount: 56;
+
+$gaps: (
+  "m": "margin",
+  "p": "padding",
+);
+$directions: (
+  "": "",
+  "l": "left",
+  "r": "right",
+  "t": "top",
+  "b": "bottom",
+  "y": "vertical",
+  "x": "horizontal",
+);
+
+@each $gapKey, $gapValue in $gaps {
+  @each $dirKey, $dirValue in $directions {
+    @for $i from 1 through $stepsAmount {
+      @if $dirKey == "" {
+        .#{$gapKey}#{$dirKey}-#{$i} {
+          #{$gapValue}-right: $i * $basicStep !important;
+          #{$gapValue}-left: $i * $basicStep !important;
+          #{$gapValue}-top: $i * $basicStep !important;
+          #{$gapValue}-bottom: $i * $basicStep !important;
+        }
+      } @else if $dirKey == "x" {
+        .#{$gapKey}#{$dirKey}-#{$i} {
+          #{$gapValue}-right: $i * $basicStep !important;
+          #{$gapValue}-left: $i * $basicStep !important;
+        }
+      } @else if $dirKey == "y" {
+        .#{$gapKey}#{$dirKey}-#{$i} {
+          #{$gapValue}-top: $i * $basicStep !important;
+          #{$gapValue}-bottom: $i * $basicStep !important;
+        }
+      } @else {
+        .#{$gapKey}#{$dirKey}-#{$i} {
+          #{$gapValue}-#{$dirValue}: $i * $basicStep !important;
+        }
+      }
+    }
+  }
+}

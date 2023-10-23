@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="login.css" rel="stylesheet">
+    </head>
+    <body>
+        <section class="login-form">
+            <form>
+                <a class="logo" href="./index.html"><img src="./public/images/waves-co.svg" alt=""></a>
+                <h1>Hello!</h1>
+                <p>Welcome back</p>
+                <div class="username">
+                    <img class="username-icon" src="https://www.svgrepo.com/show/506667/person.svg" alt="search">
+                    <input placeholder="Enter username" type="text">
+                </div>
+                <div class="password">
+                    <img class="password-icon" src="https://www.svgrepo.com/show/532323/lock-alt.svg" alt="search">
+                    <input id="password" placeholder="Enter password" type="password">
+                    <button type="button" onclick="togglePassword()">
+                        <img src="https://www.svgrepo.com/show/12044/eye.svg" alt="">
+                    </button>
+                </div>
+                <a class="login-btn" href="./index.html">Login</a>
+                <p>Don't have an account? <a href="./register.html">Create account</a></p>
+            </form>
+        </section>
+        <script>
+            function togglePassword() {
+                let inputType = document.getElementById("password").type;
+                if (inputType === "password") {
+                    document.getElementById("password").type = "text";
+                }else {
+                    document.getElementById("password").type = "password"
+                }
+            }
+        </script>
+    </body>
+</html>
