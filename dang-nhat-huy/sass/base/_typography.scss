@@ -1,0 +1,98 @@
+@use "../abstracts" as *;
+
+@font-face {
+  font-family: fraunces;
+  src: url(../fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: fraunces;
+  color: $dark-purple;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 1.2857;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: $purplish-grey;
+}
+
+.dark,
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: $white;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.1em;
+  text-decoration-color: $bright-green;
+  font-size: inherit;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: -0.01em;
+}
+
+@include breakpoint(tablet) {
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 48px;
+    line-height: 1.166666;
+  }
+}
+
+@include breakpoint(desktop) {
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 56px;
+    line-height: 1.143;
+  }
+
+  h3 {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  body {
+    font-size: 18px;
+    line-height: 1.77777;
+  }
+
+  a {
+    line-height: inherit;
+  }
+}

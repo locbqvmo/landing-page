@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Here is landing page">
+    <meta name="robots" content="index, follow" />
+    <title>Landing Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header_pc">
+            <nav aria-label="primary" class="container">
+                <div class="header_wrapper">
+                    <div class="header_wrapper_left">
+                        <a href="#">
+                            <img src="./images/logo.svg" alt="logo">
+                        </a>
+                    </div>
+
+                    <div class="header_wrapper_middle">
+                        <ul>
+                            <a class="mr-5" href="#home">Home</a>
+                            <a class="mr-5" href="#features">Feature</a>
+                            <a class="mr-5" href="#about">About</a>
+                            <a class="mr-5" href="#method">Methodology</a>
+                            <a class="mr-5" href="#blog">Blog</a>
+                        </ul>
+                    </div>
+
+                    <div class="header_wrapper_right">
+                        <a class="py-2 px-4" href="./pages/login/login.html">Login</a>
+                        <button class="header_toggle_button ml-7">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <header id="header_mobile">
+            <nav class="header_mobile_wrapper">
+                <div class="header_mobile_title mb-10">
+                    <img src="./images/logo.svg" alt="icon">
+                    <button class="header_mobile_close p-1">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                </div>
+                <ul>
+                    <a class="ml-6 px-2 py-6" href="#home">Home</a>
+                    <a class="ml-6 px-2 py-6" href="#features">Feature</a>
+                    <a class="ml-6 px-2 py-6" href="#about">About</a>
+                    <a class="ml-6 px-2 py-6" href="#method">Methodology</a>
+                    <a class="ml-6 px-2 py-6" href="#blog">Blog</a>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="container pt-12">
+                <div class="center">
+                    <button class="section_btn px-4 py-2">Finance app</button>
+                </div>
+
+                <div class="px-8">
+                    <h1 class="section_title mt-11">
+                        The most transparent & 
+                        <br>secure banking ever
+                    </h1>
+                    <p class="section_subtitle mt-8">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit ut luctus aliquet ut nisl 
+                        <br>tortor nam lacus sit in lorem elementum scelerisque ma.
+                    </p>
+                </div>
+
+                <div class="center mt-8">
+                    <button class="px-5 py-3 home_btn-1">Get started</button>
+                    <button class="px-5 py-3 ml-6 home_btn-2">Learn more</button>
+                </div>
+
+                <div class="home_hero mt-24">
+                    <picture>
+                        <img src="./images/hero_image.png" alt="home hero">
+                    </picture>
+                    <img class="home_business_image" src="./images/hero_home_business.png" alt="business values">
+                    <img class="home_business_cusomer1" src="./images/customer1.png" alt="customer 1">
+                    <img class="home_business_cusomer2" src="./images/customer2.png" alt="customer 1">
+                </div>
+
+                <div class="home_footer mt-24">
+                    <h4>Trusted by</h4>
+                    <ul>
+                        <img src="./images/google_icon.svg" alt="Google">
+                        <img src="./images/facebook.png" alt="Facebook">
+                        <img src="./images/youtube.png" alt="Youtube">
+                        <img src="./images/twitch.png" alt="Twitch">
+                        <img src="./images/pinterest.png" alt="Pinterest">
+                    </ul>
+                </div>
+            </section>
+
+            <section id="features" class="container pt-20">
+                <div class="center">
+                    <button class="section_btn px-4 py-2">Features</button>
+                </div>
+
+                <div class="px-8">
+                    <h1 class="section_title mt-11">The features that make
+                        <br>our bank unique
+                    </h1>
+                    <p class="section_subtitle mt-8">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit ut luctus aliquet ut nisl 
+                        <br>tortor nam lacus sit in lorem elementum scelerisque ma.
+                    </p>
+                </div>
+
+                <div class="features_main mt-36">
+                    <article>
+                        <img src="./images/mobile_icon.svg" alt="mobile icon">
+                        <h5>Mobile app</h5>
+                        <p>Suspendisse in amet volutpat et cras sit velit magna risus posuere volutpat laoreet dictum lectus tellus massa nec vel proin</p>
+                    </article>
+                    <article>
+                        <img src="./images/crypto_icon.svg" alt="crypto icon">
+                        <h5>Crypto supported</h5>
+                        <p>Blandit iaculis egestas sapien rhoncus congue dui placerat facilisi egestas convallis duis nunc leo tristique purus ut et enim</p>
+                    </article>
+                    <article>
+                        <img src="./images/security_icon.svg" alt="security icon">
+                        <h5>256-bit security</h5>
+                        <p>Vitae venenatis sapien in mi tristique ut vulputate elit sit fermentum arcu egestas quam amet amet libero turpis nibh</p>
+                    </article>
+                    <article>
+                        <img src="./images/support_icon.svg" alt="support icon">
+                        <h5>World-class support</h5>
+                        <p>Suspendisse in amet volutpat et cras sit velit magna risus posuere volutpat laoreet dictum lectus tellus massa nec vel proin</p>
+                    </article>
+                    <article>
+                        <img src="./images/report_icon.svg" alt="report icon">
+                        <h5>Expense reports</h5>
+                        <p>Blandit iaculis egestas sapien rhoncus congue dui placerat facilisi egestas convallis duis nunc leo tristique purus ut et enim</p>
+                    </article>
+                    <article>
+                        <img src="./images/payments_icon.svg" alt="payment icon">
+                        <h5>Automatic payments</h5>
+                        <p>Vitae venenatis sapien in mi tristique ut vulputate elit sit fermentum arcu egestas quam amet amet libero turpis nibh</p>
+                    </article>
+                </div>
+
+                <div class="center mt-28 mb-10">
+                    <button class="px-5 py-3 home_btn-1">Get started</button>
+                    <button class="px-5 py-3 ml-6 home_btn-2">Browser all features</button>
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="container pt-22 pb-26 about_main">
+                    <div class="about_main_left center">
+                        <picture>
+                            <img src="./images/product_img.png" alt="About Image">
+                        </picture>
+                        <img src="./images/product_img2.png" alt="About Values">
+                    </div>
+
+                    <div class="about_main_right pb-6 pt-12">
+                        <button class="about_main_btn py-2 px-3">
+                            Our product
+                        </button>
+                        <h2 class="mt-6">
+                            We are the next-gen
+                            banking experience
+                        </h2>
+                        <p class="mt-4">Cursus tortor id velit viverra habitasse aenean commodo volutpat olmil feugiat enim lorem laoreet facilisi phasellus diam sapien euismo.</p>
+                        <div class="about_main_right_wrapper center mt-6 mb-16">
+                            <div class="about_main_right_item mb-10">
+                                <span>
+                                    <img src="./images/innovative_icon.svg" alt="innovative">
+                                </span>
+                                <div class="about_main_right_item-title">
+                                    <h3 class="py-2">Innovative</h3>
+                                    <p>Aliquam alom turpis ac nibh at morbi vestibulum vitae lorem magnis at risus eget consequat euismodi.</p>
+                                </div>
+                            </div>
+                            <div class="about_main_right_item">
+                                <span>
+                                    <img src="./images/lock_icon.svg" alt="innovative">
+                                </span>
+                                <div class="about_main_right_item-title">
+                                    <h3 class="py-2">Secure</h3>
+                                    <p>Eget nam sed tortor placerat tellus adipiscing rhoncus viverra amet dictumst amet diam massa idol fringilla.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="about_main_btn py-3 px-5">
+                            Get started
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="method" class="container">
+                <div class="center mt-12">
+                    <button class="section_btn px-4 py-2">Finance app</button>
+                </div>
+
+                <div class="px-8 mb-20">
+                    <h1 class="section_title mt-11">
+                        It have never been easier to
+                        <br>manage your finances
+                    </h1>
+                    <p class="section_subtitle mt-8">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit ut luctus aliquet ut nisl 
+                        <br>tortor nam lacus sit in lorem elementum scelerisque ma.
+                    </p>
+                </div>
+
+                <div class="method_main_upper mt-8">
+                    <article>
+                        <picture class="pt-6 px-4 mb-6">
+                            <img src="./images/step1.png" alt="step 1">
+                        </picture>
+                        <h5 class="mb-4">1. Download our app</h5>
+                        <p>Suspendisse in amet volutpat et cras sit velit magna risus posuere volutpat laoreet dictum lectus tellus massa nec vel proin</p>
+                    </article>
+                    <article>
+                        <picture class="pt-6 px-4 mb-6">
+                            <img src="./images/step2.png" alt="step 2">
+                        </picture>
+                        <h5 class="mb-4">2. Create an account</h5>
+                        <p>Suspendisse in amet volutpat et cras sit velit magna risus posuere volutpat laoreet dictum lectus tellus massa nec vel proin</p>
+                    </article>
+                    <article>
+                        <picture class="pt-6 px-4 mb-6">
+                            <img src="./images/step3.png" alt="step 3">
+                        </picture>
+                        <h5 class="mb-4">3. Start Investing</h5>
+                        <p>Suspendisse in amet volutpat et cras sit velit magna risus posuere volutpat laoreet dictum lectus tellus massa nec vel proin</p>
+                    </article>
+                </div>
+
+                <div class="pt-22 method_main_lower">
+                    <div class="method_main_left py-6 pr-8">
+                        <button class="method_main_btn py-2 px-3">
+                            Insights
+                        </button>
+                        <h2 class="mt-14">
+                            Our company have impactful numbers
+                        </h2>
+                        <p class="mt-4">Cursus tortor id velit viverra habitasse aenean commodo volutpat olmil feugiat enim lorem laoreet facilisi phasellus diam sapien euismo.</p>
+                        <div class="method_main_left_wrapper my-16">
+                            <div>
+                                <h3>99<span class="red_color">%</span></h3>
+                                <p class="mt-2">Customer satisfaction</p>
+                            </div>
+                            <div>
+                                <h3>205M<span class="green_color">+</span></h3>
+                                <p class="mt-2">Monthly active users</p>
+                            </div>
+                            <div>
+                                <h3>100K<span class="yellow_color">+</span></h3>
+                                <p class="mt-2">New users per week</p>
+                            </div>
+                            <div>
+                                <h3>55<span>%</span></h3>
+                                <p class="mt-2">Growth year-over-year</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="method_main_right center">
+                        <picture>
+                            <img src="./images/step_img.png" alt="method Image">
+                        </picture>
+                        <img class="method_main_right_customer1" src="./images/customer2.png" alt="method Values">
+                        <img class="method_main_right_customer2" src="./images/customer3.png" alt="method Values">
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="blog" class="container">
+                <div class="center mt-12">
+                    <button class="section_btn px-4 py-2">Our blog</button>
+                </div>
+
+                <div class="px-8 mb-20">
+                    <h1 class="section_title mt-11">
+                        Take a look at our
+                        <br>articles & resources
+                    </h1>
+                </div>
+
+                <div class="blog_main">
+                    <div class="blog_main_item">
+                        <img src="./images/blog1.png" alt="blog 1">
+                        <div class="px-5 pt-3 pb-5">
+                            <h5 class="mb-1">May 3, 2022</h5>
+                            <label>Business</label>
+                            <p class="mt-3">
+                                Is it smart to invest in crypto in 2022?
+                                What you need to know
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog_main_item">
+                        <img src="./images/blog2.png" alt="blog 2">
+                        <div class="px-5 pt-3 pb-5">
+                            <h5 class="mb-1">Jun 16, 2022</h5>
+                            <label>Management</label>
+                            <p class="mt-3">
+                                How to save money - 8 simple ways 
+                                to start saving money every month
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog_main_item">
+                        <img src="./images/blog3.png" alt="blog 3">
+                        <div class="px-5 pt-3 pb-5">
+                            <h5 class="mb-1">Dec 24, 2022</h5>
+                            <label>Finances</label>
+                            <p class="mt-3">
+                                A guide to working remotely: How to
+                                maximize productivity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="pt-16">
+            <div class="container footer_main mb-8">
+                <div class="footer_main_left">
+                    <img src="./images/logo_white.png" alt="logo">
+                    <p class="my-8">
+                        Lorem ipsum dolor sit amet suspendisse varius. 
+                        Duis cursus, mi quis viverra ornare.
+                    </p>
+                    <ul>
+                        <a href="#"><img src="./images/facebook_icon.svg" alt="facebook"></a>
+                        <a href="#"><img src="./images/linkedin_icon.svg" alt="linkedin"></a>
+                        <a href="#"><img src="./images/twitter_icon.svg" alt="twitter"></a>
+                        <a href="#"><img src="./images/youtube_icon.svg" alt="youtube"></a>
+                    </ul>
+                </div>
+                <div class="footer_main_right">
+                    <article>
+                        <h5 class="mb-12">Product</h5>
+                        <ul>
+                            <a href="#">How it Works</a>
+                            <a href="#">Services</a>
+                            <a href="#">Pricing</a>
+                        </ul>
+                    </article>
+                    <article>
+                        <h5 class="mb-12">Company</h5>
+                        <ul>
+                            <a href="#">About</a>
+                            <a href="#">FAQs</a>
+                            <a href="#">Contact</a>
+                            <a href="#">Blog</a>
+                        </ul>
+                    </article>
+                    <article>
+                        <h5 class="mb-12">Utility</h5>
+                        <ul>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Use</a>
+                            <a href="#">404 page</a>
+                            <a href="#">Protected page</a>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            <hr />
+            <div class="container">
+                <p class="footer_lower">
+                    © Starthub X by 
+                    <span>Duy Hieu</span>. Powered by Webflow
+                </p>
+            </div>
+        </footer>
+
+        <!-- <div class="cursor"></div> -->
+    </div>
+</body>
+</html>
