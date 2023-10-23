@@ -343,7 +343,7 @@ body .register-form form .logo img {
 }
 body .register-form form h1 {
   color: #333;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -352,7 +352,7 @@ body .register-form form h1 {
 }
 body .register-form form p {
   color: #333;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -423,8 +423,9 @@ body .register-form form .re-password input {
 }
 body .register-form form .register-btn {
   color: white;
-  background-color: #0575e6;
-  font-family: Poppins;
+  border: 1px solid #0432df;
+  background: #0432df;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
