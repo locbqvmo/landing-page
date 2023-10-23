@@ -354,6 +354,8 @@ template {
 
 // End CSS Reset
 
+$poppins: "Poppins", sans-serif;
+
 * {
     font-family: Poppins;
 }
@@ -396,7 +398,7 @@ body {
 
       h1 {
         color: #333;
-        font-family: Poppins;
+        font-family: $poppins;
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -406,7 +408,7 @@ body {
 
       p {
         color: #333;
-        font-family: Poppins;
+        font-family: $poppins;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -484,8 +486,9 @@ body {
 
       .login-btn {
         color: white;
-        background-color: #0575e6;
-        font-family: Poppins;
+        border: 1px solid #0432df;
+        background: #0432df;
+        font-family: $poppins;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
