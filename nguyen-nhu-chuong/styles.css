@@ -73,7 +73,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -467,14 +468,13 @@ header .header-content .hint p {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 172%; /* 24.08px */
+  line-height: 172%;
   letter-spacing: -0.7px;
 }
 header .header-content .paragraph2 {
   color: var(--pale-gray);
   text-align: center;
   font-feature-settings: "salt" on, "liga" off;
-  /* Caption/Caption 3 - Medium */
   font-family: "Inter", sans-serif;
   font-size: 12px;
   font-style: normal;
@@ -484,7 +484,6 @@ header .header-content .paragraph2 {
 header .header-content .paragraph2 a {
   color: var(--pale-gray);
   font-feature-settings: "salt" on, "liga" off;
-  /* Caption/Caption 3 - Medium */
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
@@ -563,12 +562,11 @@ header .header-content .paragraph2 a {
 .best-sounds .text {
   color: var(--dark-blue);
   font-feature-settings: "salt" on, "liga" off;
-  /* Heading/Headline 4 */
   font-family: "Poppins", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 600;
-  line-height: 45px; /* 160.714% */
+  line-height: 45px;
   letter-spacing: -0.56px;
 }
 .best-sounds .text h3 {
@@ -693,7 +691,7 @@ header .header-content .paragraph2 a {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 138%; /* 22.08px */
+  line-height: 138%;
   letter-spacing: -0.8px;
 }
 .best-sounds .list .list-items .item-container .item .name-time-container .time {
@@ -703,7 +701,7 @@ header .header-content .paragraph2 a {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 172%; /* 20.64px */
+  line-height: 172%;
   letter-spacing: -0.6px;
 }
 .best-sounds .list .list-items .item-container .item .description {
@@ -722,12 +720,11 @@ header .header-content .paragraph2 a {
   width: 30%;
   color: var(--description-dark);
   font-feature-settings: "salt" on, "liga" off;
-  /* Subtitle/Subtitle 3 - Medium */
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 138%; /* 22.08px */
+  line-height: 138%;
   letter-spacing: -0.8px;
 }
 .best-sounds .list .list-items .item-container .item .btn-group {
