@@ -3742,8 +3742,10 @@ body #wrapper {
 .container .login_wrapper_upper .login_wrapper_upper_title .login_wrapper_upper_img {
   width: 175px;
   height: 51px;
-  background-image: url("../../images/instagram_label.png");
-  background-position: center 129px;
+  background-image: url("../../images/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 .container .login_wrapper_upper p {
   font-size: 0.875rem;
@@ -3775,7 +3777,7 @@ body #wrapper {
   flex-direction: column;
 }
 .container .login_wrapper_upper form .login_wrapper_main .login_btn {
-  background-color: rgb(56, 189, 248);
+  background-color: #2d89ff;
   width: 100%;
 }
 .container .login_wrapper_upper form .login_wrapper_main .login_btn button {
@@ -3784,8 +3786,12 @@ body #wrapper {
   font-size: 0.875rem;
   color: #fff;
   width: 100%;
-  background-color: rgb(56, 189, 248);
+  background-color: #2d89ff;
   cursor: pointer;
+  transition: all 0.3s;
+}
+.container .login_wrapper_upper form .login_wrapper_main .login_btn button:hover {
+  background-color: rgb(56, 189, 248);
 }
 .container .login_wrapper_upper form .login_wrapper_main button {
   border-radius: 0.5rem;
