@@ -1,4 +1,8 @@
 @media (max-width: 640px) {
+  .container {
+    padding-left: 1.75rem !important;
+    padding-right: 1.75rem !important;
+  }
   .home_footer ul {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
@@ -13,6 +17,10 @@
   }
   footer .footer_main .footer_main_right {
     justify-items: flex-start;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .header_wrapper_right a {
+    display: none;
   }
 }
 @media (min-width: 640px) {
@@ -34,6 +42,9 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     row-gap: 20%;
   }
+  #method .method_main_lower .method_main_left .method_main_left_wrapper div {
+    display: block;
+  }
   .blog_main {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -43,6 +54,9 @@
   .footer_main .footer_main_right {
     width: 60%;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .header_wrapper_right a {
+    display: none;
   }
 }
 @media (min-width: 1024px) {
@@ -54,6 +68,9 @@
   }
   .header_wrapper .header_toggle_button {
     display: none;
+  }
+  .header_wrapper .header_wrapper_right a {
+    display: inline-block;
   }
   .section_title {
     font-size: 4rem;
@@ -97,6 +114,7 @@
   }
   #method .method_main_lower .method_main_left {
     width: 60%;
+    padding-right: 2rem;
   }
   #method .method_main_lower .method_main_left h2 {
     font-size: 3rem;
