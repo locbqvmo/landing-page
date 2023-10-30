@@ -311,19 +311,6 @@ template {
   display: none;
 }
 
-:root {
-  --brave-yellow: #F59E00;
-  --dark-blue: #020D37;
-  --deep-blue: #0432DF;
-  --deep-blue-saturation: #CDD6F9;
-  --description-dark: #4C526A;
-  --description-light: #ACAFB8;
-  --bright-blue: #1B4BFF;
-  --light-gray: #F1F1F1;
-  --pale-gray: #EEEEEE;
-  --off-white: #FAFAFA;
-}
-
 * {
   font-family: "Poppins", sans-serif !important;
 }
@@ -358,6 +345,7 @@ header .nav-container nav .logo {
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
+  cursor: pointer;
 }
 header .nav-container nav .nav-right {
   display: flex;
@@ -396,13 +384,78 @@ header .nav-container nav .nav-right .menu-btn img {
 }
 header .nav-container nav .login-btn {
   border-radius: 8px;
-  border: 1px solid var(--deep-blue);
-  background: var(--deep-blue);
+  border: 1px solid #0432DF;
+  background: #0432DF;
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+header .nav-container nav #myModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+header .nav-container nav #myModal .modal-content {
+  width: 250px;
+  background-color: white;
+  float: right;
+  height: 100%;
+}
+header .nav-container nav #myModal .modal-content #closeBtn {
+  position: relative;
+  top: 16px;
+  float: right;
+  right: 16px;
+  background-color: transparent;
+  border: none;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+}
+header .nav-container nav #myModal .modal-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-left: 24px;
+  padding: 0;
+  position: relative;
+  height: 100%;
+  margin-top: 0px;
+}
+header .nav-container nav #myModal .modal-content ul li {
+  list-style-type: none;
+}
+header .nav-container nav #myModal .modal-content ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500px;
+}
+header .nav-container nav #myModal .modal-content ul li:first-child {
+  margin-top: 24px;
+}
+header .nav-container nav #myModal .modal-content ul li:last-child a {
+  display: block;
+  position: absolute;
+  border-radius: 8px;
+  border: 1px solid #0432DF;
+  background: #0432DF;
+  color: white;
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  bottom: 24px;
+  left: 50%;
+  width: 80%;
+  transform: translateX(-50%);
 }
 header .header-divider {
   opacity: 0.1;
@@ -418,13 +471,13 @@ header .header-content {
   align-items: center;
 }
 header .header-content h1 {
-  color: var(--pale-gray);
+  color: #EEEEEE;
   margin-bottom: 16px;
   margin-top: 0;
   text-align: center;
 }
 header .header-content .paragraph1 {
-  color: var(--description-light);
+  color: #ACAFB8;
   margin-top: 0;
   margin-bottom: 51px;
   font-family: "Inter", sans-serif;
@@ -448,8 +501,8 @@ header .header-content .search-bar input {
   width: 520px;
   height: 55px;
   padding: 5px;
-  font-size: 11pt;
-  background: var(--pale-gray);
+  font-size: 15px;
+  background: #EEEEEE;
   border: 0px solid;
   border-left: 0px;
   border-radius: 8px;
@@ -462,7 +515,7 @@ header .header-content .hint {
 header .header-content .hint p {
   margin-top: 0;
   margin-bottom: 51px;
-  color: var(--pale-gray);
+  color: #EEEEEE;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
   font-size: 12px;
@@ -472,7 +525,7 @@ header .header-content .hint p {
   letter-spacing: -0.7px;
 }
 header .header-content .paragraph2 {
-  color: var(--pale-gray);
+  color: #EEEEEE;
   text-align: center;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
@@ -482,9 +535,9 @@ header .header-content .paragraph2 {
   line-height: 172%;
 }
 header .header-content .paragraph2 a {
-  color: var(--pale-gray);
+  color: #EEEEEE;
   font-feature-settings: "salt" on, "liga" off;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -496,13 +549,14 @@ header .header-content .paragraph2 a {
   background: var(--off-white);
   display: flex;
   padding: 50px 0;
-  width: 100%;
+  margin: 0 12px;
+  width: auto;
   flex-direction: column;
   align-items: center;
   gap: 35px;
 }
 .trusted .text {
-  color: var(--dark-blue);
+  color: #020D37;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -560,7 +614,7 @@ header .header-content .paragraph2 a {
   gap: 14px;
 }
 .best-sounds .text {
-  color: var(--dark-blue);
+  color: #020D37;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Poppins", sans-serif;
   font-size: 28px;
@@ -596,7 +650,7 @@ header .header-content .paragraph2 a {
 }
 .best-sounds .list .filter .categories ul li a {
   display: block;
-  color: var(--description-dark);
+  color: #4C526A;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -609,7 +663,7 @@ header .header-content .paragraph2 a {
   letter-spacing: -0.8px;
 }
 .best-sounds .list .filter .categories ul li a:hover {
-  color: var(--dark-blue);
+  color: #020D37;
   text-decoration: underline;
   opacity: 1;
 }
@@ -619,13 +673,13 @@ header .header-content .paragraph2 a {
   justify-content: center;
   gap: 16px;
   border-radius: 4px;
-  background: var(--light-gray);
+  background: #F1F1F1;
   text-decoration: none;
   width: 116px;
   cursor: pointer;
 }
 .best-sounds .list .filter .button p {
-  color: var(--description-dark);
+  color: #4C526A;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -655,7 +709,7 @@ header .header-content .paragraph2 a {
   width: 100%;
   align-items: center;
   gap: 10px;
-  border-bottom: 1px solid var(--pale-gray);
+  border-bottom: 1px solid #EEEEEE;
 }
 .best-sounds .list .list-items .item-container .item {
   width: 100%;
@@ -669,6 +723,7 @@ header .header-content .paragraph2 a {
   width: 34px;
   height: 34px;
   margin: 0px 20px;
+  cursor: pointer;
 }
 .best-sounds .list .list-items .item-container .item .name-time-container {
   display: flex;
@@ -685,7 +740,7 @@ header .header-content .paragraph2 a {
   height: 22px;
   flex-direction: column;
   justify-content: center;
-  color: var(--dark-blue);
+  color: #020D37;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -695,9 +750,9 @@ header .header-content .paragraph2 a {
   letter-spacing: -0.8px;
 }
 .best-sounds .list .list-items .item-container .item .name-time-container .time {
-  color: var(--description-dark);
+  color: #4C526A;
   font-feature-settings: "salt" on, "liga" off;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -707,7 +762,7 @@ header .header-content .paragraph2 a {
 .best-sounds .list .list-items .item-container .item .description {
   width: 35%;
   margin: 0px;
-  color: var(--description-dark);
+  color: #4C526A;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
   font-size: 1rem;
@@ -718,7 +773,7 @@ header .header-content .paragraph2 a {
 }
 .best-sounds .list .list-items .item-container .item .categories {
   width: 30%;
-  color: var(--description-dark);
+  color: #4C526A;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -744,16 +799,25 @@ header .header-content .paragraph2 a {
   border-radius: 5px;
 }
 .best-sounds .list .list-items .item-container .item .btn-group .heart:hover {
-  background-color: rgb(243, 77, 77);
+  background-color: rgb(243, 243, 243);
+}
+.best-sounds .list .list-items .item-container .item .btn-group .heart:hover img {
+  filter: invert(32%) sepia(81%) saturate(7479%) hue-rotate(356deg) brightness(90%) contrast(130%);
 }
 .best-sounds .list .list-items .item-container .item .btn-group .download:hover {
-  background-color: rgb(15, 185, 15);
+  background-color: rgb(243, 243, 243);
+}
+.best-sounds .list .list-items .item-container .item .btn-group .download:hover img {
+  filter: invert(17%) sepia(83%) saturate(6951%) hue-rotate(106deg) brightness(107%) contrast(105%);
 }
 .best-sounds .list .list-items .item-container .item .btn-group .more:hover {
-  background-color: gray;
+  background-color: rgb(243, 243, 243);
+}
+.best-sounds .list .list-items .item-container .item .btn-group .more:hover img {
+  filter: invert(75%) sepia(35%) saturate(5822%) hue-rotate(0deg) brightness(103%) contrast(105%);
 }
 .best-sounds .list .see-all {
-  color: var(--deep-blue);
+  color: #0432DF;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -763,7 +827,7 @@ header .header-content .paragraph2 a {
   letter-spacing: -0.14px;
 }
 .best-sounds .list .see-all:visited {
-  color: var(--deep-blue);
+  color: #0432DF;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -783,7 +847,7 @@ header .header-content .paragraph2 a {
   gap: 23px;
 }
 .category h2 {
-  color: var(--dark-blue);
+  color: #020D37;
   text-align: center;
   font-feature-settings: "salt" on, "liga" off;
   margin: 0px;
@@ -817,7 +881,7 @@ header .header-content .paragraph2 a {
   text-decoration: none;
 }
 .category .list .items a p {
-  color: var(--pale-gray);
+  color: #EEEEEE;
   text-align: center;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
@@ -864,7 +928,7 @@ header .header-content .paragraph2 a {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(./public/images/horror.png), lightgray 50%/cover no-repeat;
 }
 .category .list .see-all {
-  color: var(--deep-blue);
+  color: #0432DF;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -874,7 +938,7 @@ header .header-content .paragraph2 a {
   letter-spacing: -0.14px;
 }
 .category .list .see-all:visited {
-  color: var(--deep-blue);
+  color: #0432DF;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -899,11 +963,11 @@ header .header-content .paragraph2 a {
   gap: 17px;
 }
 .why-us .text h4 {
-  color: var(--brave-yellow);
+  color: #F59E00;
   font-feature-settings: "salt" on, "liga" off;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
-  font-style: "Poppins", sans-serif;
+  font-style: normal;
   font-weight: 600;
   line-height: 14px;
   text-transform: uppercase;
@@ -911,7 +975,7 @@ header .header-content .paragraph2 a {
 }
 .why-us .text h2 {
   width: 337px;
-  color: var(--dark-blue);
+  color: #020D37;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Poppins", sans-serif;
   font-size: 28px;
@@ -953,7 +1017,7 @@ header .header-content .paragraph2 a {
 }
 .why-us .reasons .vertical .reason .text h5 {
   align-self: stretch;
-  color: var(--dark-blue);
+  color: #020D37;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
   font-size: 18px;
@@ -964,7 +1028,7 @@ header .header-content .paragraph2 a {
   margin: 0px;
 }
 .why-us .reasons .vertical .reason .text p {
-  color: var(--description-dark);
+  color: #4C526A;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -980,7 +1044,7 @@ header .header-content .paragraph2 a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--deep-blue);
+  background: #0432DF;
   padding: 65px 0 69px 0;
 }
 .pricing h1 {
@@ -995,9 +1059,9 @@ header .header-content .paragraph2 a {
   margin: 0px;
 }
 .pricing p {
-  color: var(--pale-gray);
+  color: #EEEEEE;
   font-feature-settings: "salt" on, "liga" off;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -1038,7 +1102,7 @@ header .header-content .paragraph2 a {
 }
 .pricing .plans .plan .top .description,
 .pricing .plans .plan .bottom .description {
-  color: var(--pale-gray);
+  color: #EEEEEE;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
   font-size: 18px;
@@ -1059,7 +1123,7 @@ header .header-content .paragraph2 a {
   letter-spacing: -1px;
 }
 .pricing .plans .basic {
-  border: 1px solid var(--deep-blue-saturation);
+  border: 1px solid #CDD6F9;
 }
 .pricing .plans .basic .bottom a {
   border-radius: 8px;
@@ -1083,10 +1147,10 @@ header .header-content .paragraph2 a {
 }
 .pricing .plans .basic .bottom a:hover {
   background: white;
-  color: var(--deep-blue);
+  color: #0432DF;
 }
 .pricing .plans .premium {
-  background: var(--bright-blue);
+  background: #1B4BFF;
 }
 .pricing .plans .premium .bottom a {
   border-radius: 8px;
@@ -1096,7 +1160,7 @@ header .header-content .paragraph2 a {
   align-items: center;
   gap: 10px;
   background: white;
-  color: var(--deep-blue);
+  color: #0432DF;
   text-align: center;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Poppins", sans-serif;
@@ -1110,7 +1174,7 @@ header .header-content .paragraph2 a {
 }
 .pricing .plans .premium .bottom a:hover {
   color: white;
-  background-color: var(--bright-blue);
+  background-color: #1B4BFF;
   border: 2px solid white;
   border-radius: 8px;
   padding: 12.5px 22.5px;
@@ -1132,18 +1196,18 @@ header .header-content .paragraph2 a {
   gap: 20px;
 }
 .testimonial .title h6 {
-  color: var(--brave-yellow);
+  color: #F59E00;
   font-feature-settings: "salt" on, "liga" off;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
-  font-style: "Poppins", sans-serif;
+  font-style: normal;
   font-weight: 600;
   line-height: 14px;
   text-transform: uppercase;
   margin: 0px;
 }
 .testimonial .title h3 {
-  color: var(--dark-blue);
+  color: #020D37;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Poppins", sans-serif;
   font-size: 28px;
@@ -1172,7 +1236,7 @@ header .header-content .paragraph2 a {
   align-items: center;
   gap: 10px;
   border-radius: 8px;
-  border: 1px solid var(--pale-gray);
+  border: 1px solid #EEEEEE;
   background: white;
 }
 .testimonial .testimonies .group .item .double-quote {
@@ -1180,7 +1244,7 @@ header .header-content .paragraph2 a {
   height: 40px;
 }
 .testimonial .testimonies .group .item .text {
-  color: var(--description-dark);
+  color: #4C526A;
   text-align: center;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
@@ -1203,7 +1267,7 @@ header .header-content .paragraph2 a {
 }
 .testimonial .testimonies .group .item .name-and-position h6 {
   align-self: stretch;
-  color: var(--dark-blue);
+  color: #020D37;
   text-align: center;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
@@ -1216,7 +1280,7 @@ header .header-content .paragraph2 a {
 }
 .testimonial .testimonies .group .item .name-and-position p {
   align-self: stretch;
-  color: var(--description-light);
+  color: #ACAFB8;
   text-align: center;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
@@ -1234,7 +1298,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
-  background: var(--dark-blue);
+  background: #020D37;
 }
 footer .info {
   display: flex;
@@ -1248,7 +1312,7 @@ footer .info img {
   height: 25.5px;
 }
 footer .info .text {
-  color: var(--description-light);
+  color: #ACAFB8;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -1259,7 +1323,7 @@ footer .info .text {
   margin: 0px;
 }
 footer .info .copyright {
-  color: var(--description-light);
+  color: #ACAFB8;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -1277,7 +1341,7 @@ footer nav {
 }
 footer nav h6 {
   margin: 0px;
-  color: var(--pale-gray);
+  color: #EEEEEE;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
   font-size: 18px;
@@ -1296,7 +1360,7 @@ footer nav ul {
   padding: 0px;
 }
 footer nav ul li a {
-  color: var(--description-light);
+  color: #ACAFB8;
   font-feature-settings: "salt" on, "liga" off;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -1554,6 +1618,7 @@ footer nav ul li a:hover {
   header .header-content h1 {
     width: 95%;
     font-size: 20px;
+    font-style: normal;
     font-weight: 600;
     line-height: 30px;
     letter-spacing: -0.4px;
@@ -1561,6 +1626,7 @@ footer nav ul li a:hover {
   header .header-content .paragraph1 {
     width: 95%;
     font-size: 16px;
+    font-style: normal;
     font-weight: 600;
     line-height: 138%;
   }
@@ -1585,6 +1651,7 @@ footer nav ul li a:hover {
   }
   .trusted .text p {
     font-size: 18px;
+    font-style: normal;
     font-weight: 600;
     line-height: 172%;
     letter-spacing: -0.9px;
@@ -1592,7 +1659,9 @@ footer nav ul li a:hover {
   .trusted .trusted-icons {
     position: relative;
   }
-  .trusted .trusted-icons .netflix, .trusted .trusted-icons .pixar, .trusted .trusted-icons .picky-picks {
+  .trusted .trusted-icons .netflix,
+  .trusted .trusted-icons .pixar,
+  .trusted .trusted-icons .picky-picks {
     position: absolute;
   }
   .trusted .trusted-icons .netflix {
@@ -1608,7 +1677,8 @@ footer nav ul li a:hover {
     right: 0;
   }
   .best-sounds {
-    width: 95%;
+    width: auto;
+    margin: 50px 16px;
   }
   .best-sounds .list .filter .categories ul li:nth-child(4),
   .best-sounds .list .filter .categories ul li:nth-child(5),
@@ -1638,11 +1708,12 @@ footer nav ul li a:hover {
     display: none;
   }
   .category {
-    width: 95%;
-    margin: 60px auto;
+    width: auto;
+    margin: 60px 16px;
   }
   .category h2 {
     font-size: 20px;
+    font-style: normal;
     font-weight: 600;
     line-height: 30px;
     letter-spacing: -0.4px;
@@ -1653,15 +1724,17 @@ footer nav ul li a:hover {
   .category .list .items a {
     height: 70px;
     font-size: 16px;
+    font-style: normal;
     font-weight: 600;
     line-height: 138%;
   }
   .why-us {
-    width: 100%;
-    padding: 60px 0 100px 0;
+    width: auto;
+    padding: 60px 16px 100px 16px;
   }
   .why-us .text h2 {
     font-size: 24px;
+    font-style: normal;
     font-weight: 600;
     line-height: 160%;
     letter-spacing: -0.48px;
@@ -1678,6 +1751,7 @@ footer nav ul li a:hover {
   }
   .why-us .reasons .vertical .reason .text h5 {
     font-size: 16px;
+    font-style: normal;
     font-weight: 600;
     line-height: 138%;
   }
@@ -1685,12 +1759,14 @@ footer nav ul li a:hover {
     width: 90%;
     font-size: 24px;
     font-style: normal;
+    font-weight: 700;
     line-height: 160%;
     letter-spacing: -0.48px;
     text-align: center;
   }
   .pricing p {
     font-size: 16px;
+    font-style: normal;
     font-weight: 500;
     line-height: 180%;
   }
@@ -1702,6 +1778,7 @@ footer nav ul li a:hover {
   }
   .pricing .plans .plan .top h2 {
     font-size: 20px;
+    font-style: normal;
     font-weight: 600;
     line-height: 30px;
     letter-spacing: -0.4px;
@@ -1712,6 +1789,7 @@ footer nav ul li a:hover {
   .testimonial .title h3 {
     width: 85%;
     font-size: 20px;
+    font-style: normal;
     font-weight: 600;
     line-height: 30px;
     letter-spacing: -0.4px;
@@ -1722,6 +1800,7 @@ footer nav ul li a:hover {
   footer {
     padding: 50px 5%;
     grid-template-columns: repeat(2, auto);
+    row-gap: 16px;
   }
   footer .info {
     grid-column-start: 1;
