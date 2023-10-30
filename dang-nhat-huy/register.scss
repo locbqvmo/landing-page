@@ -1,55 +1,65 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+@use "./sass/base";
+@use "./sass/layout" as *;
+@use "./sass/abstracts" as *;
+
+@font-face {
+  font-family: fraunces;
+  src: url(./fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
 
-html,
-body,
-:root {
-  height: 100%;
+.container {
+  background: $dark-purple;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-body {
+
+.form {
+  background: white;
   max-width: 500px;
-  margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
+  padding: 2rem;
 
-.username,
-.password {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 1rem 0;
-  label {
-    text-transform: uppercase;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    flex-basis: 30%;
-    text-align: start;
-    padding-right: 1rem;
+  .heading {
+    font-family: fraunces;
+    text-align: center;
+    margin-bottom: 1rem;
   }
   input {
-    padding: 1rem 0.75rem;
-    width: 100%;
-    border: 1px solid black;
     outline: none;
+    padding: 1rem 1rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    border: 1px solid $bright-green;
+    &::placeholder {
+      font-weight: 600;
+      color: $purplish-grey;
+    }
   }
-}
-button[type="submit"] {
-  background: #000;
-  color: white;
-  padding: 1rem 2rem;
-  border: 1px solid black;
-  transition: all 0.3s;
-  font-weight: bold;
-  &:hover {
-    background: white;
-    border: 1px solid black;
-    color: black;
+  button[type="submit"] {
+    background: $bright-green;
+    padding: 1rem 1rem;
+    width: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px solid $bright-green;
+    transition: all 0.3s;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      background: transparent;
+      color: $dark-purple;
+    }
+  }
+  .nav-link {
+    cursor: pointer;
+    padding-top: 0.5rem;
+    font-size: 0.75rem;
+    text-align: center;
   }
 }
