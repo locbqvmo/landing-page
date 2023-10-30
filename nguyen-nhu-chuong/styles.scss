@@ -1,24 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@use "./abstracts" as abs;
 @import "normalize";
 
-:root {
-  --brave-yellow: #F59E00;
-  --dark-blue: #020D37;
-  --deep-blue: #0432DF;
-  --deep-blue-saturation: #CDD6F9;
-  --description-dark: #4C526A;
-  --description-light: #ACAFB8;
-  --bright-blue: #1B4BFF;
-  --light-gray: #F1F1F1;
-  --pale-gray: #EEEEEE;
-  --off-white: #FAFAFA;
-}
-
-$poppins: "Poppins", sans-serif;
-$inter: "Inter", sans-serif;
-
 * {
-  font-family: $poppins !important;
+  font-family: abs.$poppins !important;
 }
 
 header {
@@ -57,6 +41,7 @@ header {
         align-items: center;
         gap: 10px;
         flex-shrink: 0;
+        cursor: pointer;
       }
 
       .nav-right {
@@ -104,13 +89,88 @@ header {
 
       .login-btn {
         border-radius: 8px;
-        border: 1px solid var(--deep-blue);
-        background: var(--deep-blue);
+        border: 1px solid abs.$deep-blue;
+        background: abs.$deep-blue;
         display: block;
         color: white;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+      }
+
+      #myModal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+
+        .modal-content {
+          width: 250px;
+          background-color: white;
+          float: right;
+          height: 100%;
+
+          #closeBtn {
+            position: relative;
+            top: 16px;
+            float: right;
+            right: 16px;
+            background-color: transparent;
+            border: none;
+            width: 36px;
+            height: 36px;
+            padding: 0;
+          }
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            margin-left: 24px;
+            padding: 0;
+            position: relative;
+            height: 100%;
+            margin-top: 0px;
+
+            li {
+              a {
+                text-decoration: none;
+                color: black;
+                font-family: abs.$poppins;
+                font-weight: 500px;
+              }
+
+              list-style-type: none;
+            }
+
+            li:first-child {
+              margin-top: 24px;
+            }
+
+            li:last-child {
+              a {
+                display: block;
+                position: absolute;
+                border-radius: 8px;
+                border: 1px solid abs.$deep-blue;
+                background: abs.$deep-blue;
+                color: white;
+                text-align: center;
+                padding: 12px 16px;
+                text-decoration: none;
+                bottom: 24px;
+                left: 50%;
+                width: 80%;
+                transform: translateX(-50%);
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -130,21 +190,18 @@ header {
     align-items: center;
 
     h1 {
-      color: var(--pale-gray);
+      color: abs.$pale-gray;
       margin-bottom: 16px;
       margin-top: 0;
       text-align: center;
     }
 
     .paragraph1 {
-      color: var(--description-light);
+      color: abs.$description-light;
       margin-top: 0;
       margin-bottom: 51px;
-      font-family: $inter;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 170%;
+      font-family: abs.$inter;
+      @include abs.fontConfig(20px, normal, 500, 170%);
       letter-spacing: -1px;
     }
 
@@ -163,8 +220,8 @@ header {
         width: 520px;
         height: 55px;
         padding: 5px;
-        font-size: 11pt;
-        background: var(--pale-gray);
+        font-size: 15px;
+        background: abs.$pale-gray;
         border: 0px solid;
         border-left: 0px;
         border-radius: 8px;
@@ -179,35 +236,26 @@ header {
       p {
         margin-top: 0;
         margin-bottom: 51px;
-        color: var(--pale-gray);
+        color: abs.$pale-gray;
         font-feature-settings: "salt" on, "liga" off;
-        font-family: $inter;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 172%;
+        font-family: abs.$inter;
+        @include abs.fontConfig(12px, normal, 400, 172%);
         letter-spacing: -0.7px;
       }
     }
 
     .paragraph2 {
-      color: var(--pale-gray);
+      color: abs.$pale-gray;
       text-align: center;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $inter;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 172%;
+      font-family: abs.$inter;
+      @include abs.fontConfig(12px, normal, 500, 172%);
 
       a {
-        color: var(--pale-gray);
+        color: abs.$pale-gray;
         font-feature-settings: "salt" on, "liga" off;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 172%;
+        font-family: abs.$inter;
+        @include abs.fontConfig(14px, normal, 500, 172%);
         text-decoration-line: underline;
       }
     }
@@ -218,22 +266,20 @@ header {
   background: var(--off-white);
   display: flex;
   padding: 50px 0;
-  width: 100%;
+  margin: 0 12px;
+  width: auto;
   flex-direction: column;
   align-items: center;
   gap: 35px;
 
   .text {
-    color: var(--dark-blue);
+    color: abs.$dark-blue;
     text-align: center;
     align-items: center;
     justify-content: center;
     font-feature-settings: "salt" on, "liga" off;
-    font-family: $poppins;
-    font-size: 19px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 30px;
+    font-family: abs.$poppins;
+    @include abs.fontConfig(19px, normal, 600, 30px);
     letter-spacing: -0.4px;
 
     p {
@@ -291,13 +337,10 @@ header {
   gap: 14px;
 
   .text {
-    color: var(--dark-blue);
+    color: abs.$dark-blue;
     font-feature-settings: "salt" on, "liga" off;
-    font-family: $poppins;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 45px;
+    font-family: abs.$poppins;
+    @include abs.fontConfig(28px, normal, 600, 45px);
     letter-spacing: -0.56px;
 
     h3 {
@@ -331,21 +374,18 @@ header {
           li {
             a {
               display: block;
-              color: var(--description-dark);
+              color: abs.$description-dark;
               text-align: center;
               padding: 14px 16px;
               text-decoration: none;
               opacity: 0.6;
               padding: 0px;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 138%;
+              @include abs.fontConfig(16px, normal, 500, 138%);
               letter-spacing: -0.8px;
             }
 
             a:hover {
-              color: var(--dark-blue);
+              color: abs.$dark-blue;
               text-decoration: underline;
               opacity: 1;
             }
@@ -359,19 +399,16 @@ header {
         justify-content: center;
         gap: 16px;
         border-radius: 4px;
-        background: var(--light-gray);
+        background: abs.$light-gray;
         text-decoration: none;
         width: 116px;
         cursor: pointer;
 
         p {
-          color: var(--description-dark);
+          color: abs.$description-dark;
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $inter;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 138%;
+          font-family: abs.$inter;
+          @include abs.fontConfig(16px, normal, 500, 138%);
           letter-spacing: -0.8px;
           margin: auto 0px;
         }
@@ -399,7 +436,7 @@ header {
         width: 100%;
         align-items: center;
         gap: 10px;
-        border-bottom: 1px solid var(--pale-gray);
+        border-bottom: 1px solid abs.$pale-gray;
 
         .item {
           width: 100%;
@@ -413,6 +450,7 @@ header {
             width: 34px;
             height: 34px;
             margin: 0px 20px;
+            cursor: pointer;
           }
 
           .name-time-container {
@@ -431,24 +469,18 @@ header {
               height: 22px;
               flex-direction: column;
               justify-content: center;
-              color: var(--dark-blue);
+              color: abs.$dark-blue;
               font-feature-settings: "salt" on, "liga" off;
-              font-family: $inter;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 138%;
+              font-family: abs.$inter;
+              @include abs.fontConfig(16px, normal, 500, 138%);
               letter-spacing: -0.8px;
             }
 
             .time {
-              color: var(--description-dark);
+              color: abs.$description-dark;
               font-feature-settings: "salt" on, "liga" off;
-              font-family: Inter;
-              font-size: 12px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 172%;
+              font-family: abs.$inter;
+              @include abs.fontConfig(12px, normal, 400, 172%);
               letter-spacing: -0.6px;
             }
           }
@@ -456,25 +488,19 @@ header {
           .description {
             width: 35%;
             margin: 0px;
-            color: var(--description-dark);
+            color: abs.$description-dark;
             font-feature-settings: "salt" on, "liga" off;
-            font-family: $inter;
-            font-size: 1rem;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 138%;
+            font-family: abs.$inter;
+            @include abs.fontConfig(1rem, normal, 500, 138%);
             letter-spacing: -0.05rem;
           }
 
           .categories {
             width: 30%;
-            color: var(--description-dark);
+            color: abs.$description-dark;
             font-feature-settings: "salt" on, "liga" off;
-            font-family: $inter;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 138%;
+            font-family: abs.$inter;
+            @include abs.fontConfig(16px, normal, 500, 138%);
             letter-spacing: -0.8px;
           }
 
@@ -496,13 +522,28 @@ header {
             }
 
             .heart:hover {
-              background-color: rgb(243, 77, 77);
+              background-color: rgb(243, 243, 243);
+
+              img {
+                filter: invert(32%) sepia(81%) saturate(7479%)
+                  hue-rotate(356deg) brightness(90%) contrast(130%);
+              }
             }
             .download:hover {
-              background-color: rgb(15, 185, 15);
+              background-color: rgb(243, 243, 243);
+
+              img {
+                filter: invert(17%) sepia(83%) saturate(6951%)
+                  hue-rotate(106deg) brightness(107%) contrast(105%);
+              }
             }
             .more:hover {
-              background-color: gray;
+              background-color: rgb(243, 243, 243);
+
+              img {
+                filter: invert(75%) sepia(35%) saturate(5822%) hue-rotate(0deg)
+                  brightness(103%) contrast(105%);
+              }
             }
           }
         }
@@ -510,24 +551,18 @@ header {
     }
 
     .see-all {
-      color: var(--deep-blue);
+      color: abs.$deep-blue;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $poppins;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 24px;
+      font-family: abs.$poppins;
+      @include abs.fontConfig(14px, normal, 600, 24px);
       letter-spacing: -0.14px;
     }
 
     .see-all:visited {
-      color: var(--deep-blue);
+      color: abs.$deep-blue;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $poppins;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 24px;
+      font-family: abs.$poppins;
+      @include abs.fontConfig(14px, normal, 600, 24px);
       letter-spacing: -0.14px;
     }
   }
@@ -543,15 +578,12 @@ header {
   gap: 23px;
 
   h2 {
-    color: var(--dark-blue);
+    color: abs.$dark-blue;
     text-align: center;
     font-feature-settings: "salt" on, "liga" off;
     margin: 0px;
-    font-family: $poppins;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 45px;
+    font-family: abs.$poppins;
+    @include abs.fontConfig(28px, normal, 600, 45px);
     letter-spacing: -0.56px;
   }
 
@@ -578,14 +610,11 @@ header {
         text-decoration: none;
 
         p {
-          color: var(--pale-gray);
+          color: abs.$pale-gray;
           text-align: center;
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $inter;
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 172%;
+          font-family: abs.$inter;
+          @include abs.fontConfig(18px, normal, 600, 172%);
           letter-spacing: -0.9px;
         }
       }
@@ -702,24 +731,18 @@ header {
     }
 
     .see-all {
-      color: var(--deep-blue);
+      color: abs.$deep-blue;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $poppins;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 24px;
+      font-family: abs.$poppins;
+      @include abs.fontConfig(14px, normal, 600, 24px);
       letter-spacing: -0.14px;
     }
 
     .see-all:visited {
-      color: var(--deep-blue);
+      color: abs.$deep-blue;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $poppins;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 24px;
+      font-family: abs.$poppins;
+      @include abs.fontConfig(14px, normal, 600, 24px);
       letter-spacing: -0.14px;
     }
   }
@@ -740,26 +763,20 @@ header {
     gap: 17px;
 
     h4 {
-      color: var(--brave-yellow);
+      color: abs.$brave-yellow;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: Poppins;
-      font-size: 14px;
-      font-style: $poppins;
-      font-weight: 600;
-      line-height: 14px;
+      font-family: abs.$poppins;
+      @include abs.fontConfig(14px, normal, 600, 14px);
       text-transform: uppercase;
       margin: 0px;
     }
 
     h2 {
       width: 337px;
-      color: var(--dark-blue);
+      color: abs.$dark-blue;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $poppins;
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 45px;
+      font-family: abs.$poppins;
+      @include abs.fontConfig(28px, normal, 600, 45px);
       letter-spacing: -0.56px;
       margin: 0px;
     }
@@ -798,25 +815,19 @@ header {
 
           h5 {
             align-self: stretch;
-            color: var(--dark-blue);
+            color: abs.$dark-blue;
             font-feature-settings: "salt" on, "liga" off;
-            font-family: $inter;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 172%;
+            font-family: abs.$inter;
+            @include abs.fontConfig(18px, normal, 600, 172%);
             letter-spacing: -0.9px;
             margin: 0px;
           }
 
           p {
-            color: var(--description-dark);
+            color: abs.$description-dark;
             font-feature-settings: "salt" on, "liga" off;
-            font-family: $inter;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 172%;
+            font-family: abs.$inter;
+            @include abs.fontConfig(14px, normal, 500, 172%);
             margin: 0px;
           }
         }
@@ -831,29 +842,23 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--deep-blue);
+  background: abs.$deep-blue;
   padding: 65px 0 69px 0;
 
   h1 {
     color: white;
     font-feature-settings: "salt" on, "liga" off;
-    font-family: $poppins;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 146.5%;
+    font-family: abs.$poppins;
+    @include abs.fontConfig(36px, normal, 700, 146.5%);
     letter-spacing: -0.72px;
     margin: 0px;
   }
 
   p {
-    color: var(--pale-gray);
+    color: abs.$pale-gray;
     font-feature-settings: "salt" on, "liga" off;
-    font-family: Inter;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 189%;
+    font-family: abs.$inter;
+    @include abs.fontConfig(18px, normal, 500, 189%);
     letter-spacing: -0.9px;
     margin: 14px 0px 0px 0px;
   }
@@ -882,22 +887,16 @@ header {
         h2 {
           color: white;
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $poppins;
-          font-size: 28px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 45px;
+          font-family: abs.$poppins;
+          @include abs.fontConfig(28px, normal, 600, 45px);
           letter-spacing: -0.56px;
         }
 
         .description {
-          color: var(--pale-gray);
+          color: abs.$pale-gray;
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $inter;
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: 172%;
+          font-family: abs.$inter;
+          @include abs.fontConfig(18px, normal, 300, 172%);
           letter-spacing: -0.9px;
         }
 
@@ -905,18 +904,15 @@ header {
           color: white;
 
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $inter;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 170%;
+          font-family: abs.$inter;
+          @include abs.fontConfig(20px, normal, 500, 170%);
           letter-spacing: -1px;
         }
       }
     }
 
     .basic {
-      border: 1px solid var(--deep-blue-saturation);
+      border: 1px solid abs.$deep-blue-saturation;
 
       .bottom {
         a {
@@ -930,11 +926,8 @@ header {
           color: white;
           text-align: center;
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $poppins;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 24px;
+          font-family: abs.$poppins;
+          @include abs.fontConfig(16px, normal, 600, 24px);
           letter-spacing: -0.16px;
           text-decoration: none;
           margin-top: 8px;
@@ -942,13 +935,13 @@ header {
 
         a:hover {
           background: white;
-          color: var(--deep-blue);
+          color: abs.$deep-blue;
         }
       }
     }
 
     .premium {
-      background: var(--bright-blue);
+      background: abs.$bright-blue;
 
       .bottom {
         a {
@@ -959,14 +952,11 @@ header {
           align-items: center;
           gap: 10px;
           background: white;
-          color: var(--deep-blue);
+          color: abs.$deep-blue;
           text-align: center;
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $poppins;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 24px;
+          font-family: abs.$poppins;
+          @include abs.fontConfig(16px, normal, 600, 24px);
           letter-spacing: -0.16px;
           text-decoration: none;
           margin-top: 8px;
@@ -974,7 +964,7 @@ header {
 
         a:hover {
           color: white;
-          background-color: var(--bright-blue);
+          background-color: abs.$bright-blue;
           border: 2px solid white;
           border-radius: 8px;
           padding: 12.5px 22.5px;
@@ -1000,25 +990,19 @@ header {
     gap: 20px;
 
     h6 {
-      color: var(--brave-yellow);
+      color: abs.$brave-yellow;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: Poppins;
-      font-size: 14px;
-      font-style: $poppins;
-      font-weight: 600;
-      line-height: 14px;
+      font-family: abs.$poppins;
+      @include abs.fontConfig(14px, normal, 600, 14px);
       text-transform: uppercase;
       margin: 0px;
     }
 
     h3 {
-      color: var(--dark-blue);
+      color: abs.$dark-blue;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $poppins;
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 45px;
+      font-family: abs.$poppins;
+      @include abs.fontConfig(28px, normal, 600, 45px);
       letter-spacing: -0.56px;
       margin: 0px;
     }
@@ -1043,7 +1027,7 @@ header {
         align-items: center;
         gap: 10px;
         border-radius: 8px;
-        border: 1px solid var(--pale-gray);
+        border: 1px solid abs.$pale-gray;
         background: white;
 
         .double-quote {
@@ -1052,14 +1036,11 @@ header {
         }
 
         .text {
-          color: var(--description-dark);
+          color: abs.$description-dark;
           text-align: center;
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $inter;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 172%;
+          font-family: abs.$inter;
+          @include abs.fontConfig(14px, normal, 500, 172%);
           margin: 0px;
         }
 
@@ -1077,28 +1058,22 @@ header {
 
           h6 {
             align-self: stretch;
-            color: var(--dark-blue);
+            color: abs.$dark-blue;
             text-align: center;
             font-feature-settings: "salt" on, "liga" off;
-            font-family: $inter;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 172%;
+            font-family: abs.$inter;
+            @include abs.fontConfig(18px, normal, 600, 172%);
             letter-spacing: -0.9px;
             margin: 0px;
           }
 
           p {
             align-self: stretch;
-            color: var(--description-light);
+            color: abs.$description-light;
             text-align: center;
             font-feature-settings: "salt" on, "liga" off;
-            font-family: $inter;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 172%;
+            font-family: abs.$inter;
+            @include abs.fontConfig(14px, normal, 500, 172%);
             margin: 0px;
           }
         }
@@ -1114,7 +1089,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
-  background: var(--dark-blue);
+  background: abs.$dark-blue;
 
   .info {
     display: flex;
@@ -1129,25 +1104,19 @@ footer {
     }
 
     .text {
-      color: var(--description-light);
+      color: abs.$description-light;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $inter;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 180%;
+      font-family: abs.$inter;
+      @include abs.fontConfig(16px, normal, 400, 180%);
       letter-spacing: -0.8px;
       margin: 0px;
     }
 
     .copyright {
-      color: var(--description-light);
+      color: abs.$description-light;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $inter;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 172%;
+      font-family: abs.$inter;
+      @include abs.fontConfig(14px, normal, 500, 172%);
       margin: 5px 0px 0px 0px;
     }
   }
@@ -1161,13 +1130,10 @@ footer {
 
     h6 {
       margin: 0px;
-      color: var(--pale-gray);
+      color: abs.$pale-gray;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $inter;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 172%;
+      font-family: abs.$inter;
+      @include abs.fontConfig(18px, normal, 600, 172%);
       letter-spacing: -0.9px;
     }
 
@@ -1182,13 +1148,10 @@ footer {
 
       li {
         a {
-          color: var(--description-light);
+          color: abs.$description-light;
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $inter;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 180%;
+          font-family: abs.$inter;
+          @include abs.fontConfig(16px, normal, 400, 180%);
           letter-spacing: -0.8px;
           text-decoration: none;
         }
@@ -1208,10 +1171,7 @@ footer {
     .header-content {
       text-align: center;
       .paragraph1 {
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 172%;
+        @include abs.fontConfig(18px, normal, 500, 172%);
         letter-spacing: -0.9px;
       }
 
@@ -1297,10 +1257,7 @@ footer {
             gap: 18px;
             li {
               a {
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 138%;
+                @include abs.fontConfig(14px, normal, 500, 138%);
                 letter-spacing: -0.7px;
               }
             }
@@ -1313,10 +1270,7 @@ footer {
           gap: 16px;
 
           p {
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 138%;
+            @include abs.fontConfig(14px, normal, 500, 138%);
             letter-spacing: -0.7px;
           }
 
@@ -1332,19 +1286,13 @@ footer {
           .item {
             .name-time-container {
               .name {
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 138%;
+                @include abs.fontConfig(14px, normal, 500, 138%);
                 letter-spacing: -0.7px;
               }
             }
 
             .categories {
-              font-size: 14px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 138%;
+              @include abs.fontConfig(14px, normal, 500, 138%);
               letter-spacing: -0.7px;
             }
 
@@ -1359,10 +1307,7 @@ footer {
 
   .category {
     h2 {
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 160%;
+      @include abs.fontConfig(24px, normal, 600, 160%);
       letter-spacing: -0.48px;
     }
 
@@ -1390,10 +1335,7 @@ footer {
       }
 
       h2 {
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 160%;
+        @include abs.fontConfig(24px, normal, 600, 160%);
         letter-spacing: -0.48px;
       }
     }
@@ -1413,10 +1355,7 @@ footer {
 
   .pricing {
     h1 {
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 45px;
+      @include abs.fontConfig(28px, normal, 600, 45px);
       letter-spacing: -0.56px;
     }
 
@@ -1424,28 +1363,19 @@ footer {
       .plan {
         .top {
           h2 {
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 160%;
+            @include abs.fontConfig(24px, normal, 600, 160%);
             letter-spacing: -0.48px;
           }
 
           p {
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 138%;
+            @include abs.fontConfig(16px, normal, 500, 138%);
             letter-spacing: -0.8px;
           }
         }
 
         .bottom {
           .price {
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 172%;
+            @include abs.fontConfig(18px, normal, 600, 172%);
             letter-spacing: -0.9px;
           }
 
@@ -1495,29 +1425,20 @@ footer {
       }
 
       p {
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 172%;
+        @include abs.fontConfig(14px, normal, 400, 172%);
         letter-spacing: -0.7px;
       }
     }
 
     nav {
       h6 {
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 138%;
+        @include abs.fontConfig(16px, normal, 600, 138%);
       }
 
       ul {
         li {
           a {
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 172%;
+            @include abs.fontConfig(14px, normal, 400, 172%);
             letter-spacing: -0.7px;
           }
         }
@@ -1560,17 +1481,13 @@ footer {
     .header-content {
       h1 {
         width: 95%;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 30px;
+        @include abs.fontConfig(20px, normal, 600, 30px);
         letter-spacing: -0.4px;
       }
 
       .paragraph1 {
         width: 95%;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 138%;     
+        @include abs.fontConfig(16px, normal, 600, 138%);
       }
 
       .search-bar {
@@ -1600,18 +1517,18 @@ footer {
 
     .text {
       p {
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 172%; 
-        letter-spacing: -0.9px;        
+        @include abs.fontConfig(18px, normal, 600, 172%);
+        letter-spacing: -0.9px;
       }
     }
 
     .trusted-icons {
       position: relative;
 
-      .netflix, .pixar, .picky-picks {
-        position: absolute; 
+      .netflix,
+      .pixar,
+      .picky-picks {
+        position: absolute;
       }
 
       .netflix {
@@ -1632,7 +1549,8 @@ footer {
   }
 
   .best-sounds {
-    width: 95%;
+    width: auto;
+    margin: 50px 16px;
     .list {
       .filter {
         .categories {
@@ -1681,13 +1599,11 @@ footer {
   }
 
   .category {
-    width: 95%;
-    margin: 60px auto;
+    width: auto;
+    margin: 60px 16px;
 
     h2 {
-      font-size: 20px;
-      font-weight: 600;
-      line-height: 30px;
+      @include abs.fontConfig(20px, normal, 600, 30px);
       letter-spacing: -0.4px;
     }
 
@@ -1697,43 +1613,36 @@ footer {
 
         a {
           height: 70px;
-          font-size: 16px;
-          font-weight: 600;
-          line-height: 138%;
+          @include abs.fontConfig(16px, normal, 600, 138%);
         }
       }
     }
   }
 
   .why-us {
-    width: 100%;
-    padding: 60px 0 100px 0;
+    width: auto;
+    padding: 60px 16px 100px 16px;
 
     .text {
       h2 {
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 160%;
+        @include abs.fontConfig(24px, normal, 600, 160%);
         letter-spacing: -0.48px;
-        
       }
     }
 
     .reasons {
       flex-direction: column;
-      
+
       .vertical {
         width: 90%;
         align-self: center;
-        
+
         .reason {
           margin: 0 auto;
 
           .text {
             h5 {
-              font-size: 16px;
-              font-weight: 600;
-              line-height: 138%;         
+              @include abs.fontConfig(16px, normal, 600, 138%);
             }
           }
         }
@@ -1744,17 +1653,13 @@ footer {
   .pricing {
     h1 {
       width: 90%;
-      font-size: 24px;
-      font-style: normal;
-      line-height: 160%;
+      @include abs.fontConfig(24px, normal, 700, 160%);
       letter-spacing: -0.48px;
       text-align: center;
     }
 
     p {
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 180%;    
+      @include abs.fontConfig(16px, normal, 500, 180%);
     }
 
     .plans {
@@ -1765,13 +1670,9 @@ footer {
 
         .top {
           h2 {
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 30px;
-            letter-spacing: -0.4px;            
+            @include abs.fontConfig(20px, normal, 600, 30px);
+            letter-spacing: -0.4px;
           }
-
-
         }
       }
     }
@@ -1783,10 +1684,8 @@ footer {
     .title {
       h3 {
         width: 85%;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 30px;
-        letter-spacing: -0.4px;        
+        @include abs.fontConfig(20px, normal, 600, 30px);
+        letter-spacing: -0.4px;
       }
     }
 
@@ -1802,6 +1701,7 @@ footer {
   footer {
     padding: 50px 5%;
     grid-template-columns: repeat(2, auto);
+    row-gap: 16px;
 
     .info {
       grid-column-start: 1;
