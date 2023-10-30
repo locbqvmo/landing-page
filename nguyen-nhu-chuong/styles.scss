@@ -1,369 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap");
-
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-
-html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/* Sections
-     ========================================================================== */
-
-/**
-   * Remove the margin in all browsers.
-   */
-
-body {
-  margin: 0;
-}
-
-/**
-   * Render the `main` element consistently in IE.
-   */
-
-main {
-  display: block;
-}
-
-/**
-   * Correct the font size and margin on `h1` elements within `section` and
-   * `article` contexts in Chrome, Firefox, and Safari.
-   */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/* Grouping content
-     ========================================================================== */
-
-/**
-   * 1. Add the correct box sizing in Firefox.
-   * 2. Show the overflow in Edge and IE.
-   */
-
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
-
-/**
-   * 1. Correct the inheritance and scaling of font size in all browsers.
-   * 2. Correct the odd `em` font sizing in all browsers.
-   */
-
-pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/* Text-level semantics
-     ========================================================================== */
-
-/**
-   * Remove the gray background on active links in IE 10.
-   */
-
-a {
-  background-color: transparent;
-}
-
-/**
-   * 1. Remove the bottom border in Chrome 57-
-   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-   */
-
-abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
-}
-
-/**
-   * Add the correct font weight in Chrome, Edge, and Safari.
-   */
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-/**
-   * 1. Correct the inheritance and scaling of font size in all browsers.
-   * 2. Correct the odd `em` font sizing in all browsers.
-   */
-
-code,
-kbd,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-/**
-   * Add the correct font size in all browsers.
-   */
-
-small {
-  font-size: 80%;
-}
-
-/**
-   * Prevent `sub` and `sup` elements from affecting the line height in
-   * all browsers.
-   */
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-/* Embedded content
-     ========================================================================== */
-
-/**
-   * Remove the border on images inside links in IE 10.
-   */
-
-img {
-  border-style: none;
-}
-
-/* Forms
-     ========================================================================== */
-
-/**
-   * 1. Change the font styles in all browsers.
-   * 2. Remove the margin in Firefox and Safari.
-   */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
-}
-
-/**
-   * Show the overflow in IE.
-   * 1. Show the overflow in Edge.
-   */
-
-button,
-input {
-  /* 1 */
-  overflow: visible;
-}
-
-/**
-   * Remove the inheritance of text transform in Edge, Firefox, and IE.
-   * 1. Remove the inheritance of text transform in Firefox.
-   */
-
-button,
-select {
-  /* 1 */
-  text-transform: none;
-}
-
-/**
-   * Correct the inability to style clickable types in iOS and Safari.
-   */
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
-
-/**
-   * Remove the inner border and padding in Firefox.
-   */
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-/**
-   * Restore the focus styles unset by the previous rule.
-   */
-
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-/**
-   * Correct the padding in Firefox.
-   */
-
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-
-/**
-   * 1. Correct the text wrapping in Edge and IE.
-   * 2. Correct the color inheritance from `fieldset` elements in IE.
-   * 3. Remove the padding so developers are not caught out when they zero out
-   *    `fieldset` elements in all browsers.
-   */
-
-legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
-}
-
-/**
-   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
-   */
-
-progress {
-  vertical-align: baseline;
-}
-
-/**
-   * Remove the default vertical scrollbar in IE 10+.
-   */
-
-textarea {
-  overflow: auto;
-}
-
-/**
-   * 1. Add the correct box sizing in IE 10.
-   * 2. Remove the padding in IE 10.
-   */
-
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
-
-/**
-   * Correct the cursor style of increment and decrement buttons in Chrome.
-   */
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
-   * 1. Correct the odd appearance in Chrome and Safari.
-   * 2. Correct the outline style in Safari.
-   */
-
-[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
-}
-
-/**
-   * Remove the inner padding in Chrome and Safari on macOS.
-   */
-
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
-   * 1. Correct the inability to style clickable types in iOS and Safari.
-   * 2. Change font properties to `inherit` in Safari.
-   */
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
-
-/* Interactive
-     ========================================================================== */
-
-/*
-   * Add the correct display in Edge, IE 10+, and Firefox.
-   */
-
-details {
-  display: block;
-}
-
-/*
-   * Add the correct display in all browsers.
-   */
-
-summary {
-  display: list-item;
-}
-
-/* Misc
-     ========================================================================== */
-
-/**
-   * Add the correct display in IE 10+.
-   */
-
-template {
-  display: none;
-}
-
-/**
-   * Add the correct display in IE 10.
-   */
-
-[hidden] {
-  display: none;
-}
-
-// End CSS Reset
-
-$poppins: "Poppins", sans-serif;
-$inter: "Inter", sans-serif;
+@use "./abstracts" as abs;
+@import "normalize";
 
 * {
-  font-family: $poppins !important;
+  font-family: abs.$poppins !important;
 }
 
 header {
   height: 650px;
-  //   width: 100vw;
   flex-shrink: 0;
   background: linear-gradient(
       0deg,
@@ -398,6 +41,7 @@ header {
         align-items: center;
         gap: 10px;
         flex-shrink: 0;
+        cursor: pointer;
       }
 
       .nav-right {
@@ -429,45 +73,136 @@ header {
             }
           }
         }
+
+        .menu-btn {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          display: none;
+
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
       }
 
       .login-btn {
         border-radius: 8px;
-        border: 1px solid #0432df;
-        background: #0432df;
+        border: 1px solid abs.$deep-blue;
+        background: abs.$deep-blue;
         display: block;
         color: white;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
       }
+
+      #myModal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+
+        .modal-content {
+          width: 250px;
+          background-color: white;
+          float: right;
+          height: 100%;
+
+          #closeBtn {
+            position: relative;
+            top: 16px;
+            float: right;
+            right: 16px;
+            background-color: transparent;
+            border: none;
+            width: 36px;
+            height: 36px;
+            padding: 0;
+          }
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            margin-left: 24px;
+            padding: 0;
+            position: relative;
+            height: 100%;
+            margin-top: 0px;
+
+            li {
+              a {
+                text-decoration: none;
+                color: black;
+                font-family: abs.$poppins;
+                font-weight: 500px;
+              }
+
+              list-style-type: none;
+            }
+
+            li:first-child {
+              margin-top: 24px;
+            }
+
+            li:last-child {
+              a {
+                display: block;
+                position: absolute;
+                border-radius: 8px;
+                border: 1px solid abs.$deep-blue;
+                background: abs.$deep-blue;
+                color: white;
+                text-align: center;
+                padding: 12px 16px;
+                text-decoration: none;
+                bottom: 24px;
+                left: 50%;
+                width: 80%;
+                transform: translateX(-50%);
+              }
+            }
+          }
+        }
+      }
     }
   }
 
   .header-divider {
     opacity: 0.1;
-    background: #fff;
+    background: white;
     margin: 0;
   }
 
   .header-content {
     display: flex;
+    font-size: 20px;
     flex-direction: column;
     padding-top: 95px;
     justify-content: center;
     align-items: center;
 
     h1 {
-      color: #eee;
+      color: abs.$pale-gray;
       margin-bottom: 16px;
       margin-top: 0;
+      text-align: center;
     }
 
     .paragraph1 {
-      color: #acafb8;
+      color: abs.$description-light;
       margin-top: 0;
       margin-bottom: 51px;
-      font-family: $inter;
+      font-family: abs.$inter;
+      @include abs.fontConfig(20px, normal, 500, 170%);
+      letter-spacing: -1px;
     }
 
     .search-bar {
@@ -485,8 +220,8 @@ header {
         width: 520px;
         height: 55px;
         padding: 5px;
-        font-size: 11pt;
-        background: #eee;
+        font-size: 15px;
+        background: abs.$pale-gray;
         border: 0px solid;
         border-left: 0px;
         border-radius: 8px;
@@ -501,37 +236,26 @@ header {
       p {
         margin-top: 0;
         margin-bottom: 51px;
-        color: #eee;
+        color: abs.$pale-gray;
         font-feature-settings: "salt" on, "liga" off;
-        font-family: $inter;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 172%; /* 24.08px */
+        font-family: abs.$inter;
+        @include abs.fontConfig(12px, normal, 400, 172%);
         letter-spacing: -0.7px;
       }
     }
 
     .paragraph2 {
-      color: #eee;
+      color: abs.$pale-gray;
       text-align: center;
       font-feature-settings: "salt" on, "liga" off;
-      /* Caption/Caption 3 - Medium */
-      font-family: $inter;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 172%;
+      font-family: abs.$inter;
+      @include abs.fontConfig(12px, normal, 500, 172%);
 
       a {
-        color: #eee;
+        color: abs.$pale-gray;
         font-feature-settings: "salt" on, "liga" off;
-        /* Caption/Caption 3 - Medium */
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 172%;
+        font-family: abs.$inter;
+        @include abs.fontConfig(14px, normal, 500, 172%);
         text-decoration-line: underline;
       }
     }
@@ -539,23 +263,23 @@ header {
 }
 
 .trusted {
-  background: #fafafa;
+  background: var(--off-white);
   display: flex;
-  padding: 50px 100px 60px 100px;
+  padding: 50px 0;
+  margin: 0 12px;
+  width: auto;
   flex-direction: column;
   align-items: center;
   gap: 35px;
 
   .text {
-    color: #020d37;
+    color: abs.$dark-blue;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     font-feature-settings: "salt" on, "liga" off;
-    /* Heading/Headline 6 */
-    font-family: $poppins;
-    font-size: 19px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 30px; /* 150% */
+    font-family: abs.$poppins;
+    @include abs.fontConfig(19px, normal, 600, 30px);
     letter-spacing: -0.4px;
 
     p {
@@ -565,28 +289,58 @@ header {
 
   .trusted-icons {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    gap: 89px;
+    width: 80%;
+    margin: 0 -17px;
+
+    .dudeperfect,
+    .pewdiepie {
+      width: 50px;
+      height: 50px;
+    }
+
+    .mr-beast {
+      width: 77px;
+      height: 54px;
+    }
+
+    .wb {
+      width: 50px;
+      height: 62px;
+    }
+
+    .netflix {
+      width: 94px;
+      height: 25px;
+    }
+
+    .pixar {
+      width: 130px;
+      height: 24.919px;
+    }
+
+    .picky-picks {
+      width: 52.061px;
+      height: 52.061px;
+    }
   }
 }
 
 .best-sounds {
   display: flex;
-  padding: 80px 100px 60px 100px;
   flex-direction: column;
+  width: 80%;
   align-items: flex-start;
+  margin: 50px auto;
   gap: 14px;
 
   .text {
-    color: #020d37;
+    color: abs.$dark-blue;
     font-feature-settings: "salt" on, "liga" off;
-    /* Heading/Headline 4 */
-    font-family: $poppins;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 45px; /* 160.714% */
+    font-family: abs.$poppins;
+    @include abs.fontConfig(28px, normal, 600, 45px);
     letter-spacing: -0.56px;
 
     h3 {
@@ -596,6 +350,7 @@ header {
 
   .list {
     width: 100%;
+    align-self: center;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -619,16 +374,18 @@ header {
           li {
             a {
               display: block;
-              color: #4c526a;
+              color: abs.$description-dark;
               text-align: center;
               padding: 14px 16px;
               text-decoration: none;
               opacity: 0.6;
               padding: 0px;
+              @include abs.fontConfig(16px, normal, 500, 138%);
+              letter-spacing: -0.8px;
             }
 
             a:hover {
-              color: #020d37;
+              color: abs.$dark-blue;
               text-decoration: underline;
               opacity: 1;
             }
@@ -642,18 +399,16 @@ header {
         justify-content: center;
         gap: 16px;
         border-radius: 4px;
-        background: #f1f1f1;
+        background: abs.$light-gray;
         text-decoration: none;
-        width: 100px;
+        width: 116px;
+        cursor: pointer;
 
         p {
-          color: #4c526a;
+          color: abs.$description-dark;
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $inter;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 138%;
+          font-family: abs.$inter;
+          @include abs.fontConfig(16px, normal, 500, 138%);
           letter-spacing: -0.8px;
           margin: auto 0px;
         }
@@ -681,7 +436,7 @@ header {
         width: 100%;
         align-items: center;
         gap: 10px;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid abs.$pale-gray;
 
         .item {
           width: 100%;
@@ -695,6 +450,7 @@ header {
             width: 34px;
             height: 34px;
             margin: 0px 20px;
+            cursor: pointer;
           }
 
           .name-time-container {
@@ -710,28 +466,21 @@ header {
 
             .name {
               display: flex;
-              // width: 142px;
               height: 22px;
               flex-direction: column;
               justify-content: center;
-              color: #020d37;
+              color: abs.$dark-blue;
               font-feature-settings: "salt" on, "liga" off;
-              font-family: $inter;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 138%; /* 22.08px */
+              font-family: abs.$inter;
+              @include abs.fontConfig(16px, normal, 500, 138%);
               letter-spacing: -0.8px;
             }
 
             .time {
-              color: #4c526a;
+              color: abs.$description-dark;
               font-feature-settings: "salt" on, "liga" off;
-              font-family: Inter;
-              font-size: 12px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 172%; /* 20.64px */
+              font-family: abs.$inter;
+              @include abs.fontConfig(12px, normal, 400, 172%);
               letter-spacing: -0.6px;
             }
           }
@@ -739,26 +488,19 @@ header {
           .description {
             width: 35%;
             margin: 0px;
-            color: #4c526a;
+            color: abs.$description-dark;
             font-feature-settings: "salt" on, "liga" off;
-            font-family: $inter;
-            font-size: 1rem;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 138%;
+            font-family: abs.$inter;
+            @include abs.fontConfig(1rem, normal, 500, 138%);
             letter-spacing: -0.05rem;
           }
 
           .categories {
             width: 30%;
-            color: #4c526a;
+            color: abs.$description-dark;
             font-feature-settings: "salt" on, "liga" off;
-            /* Subtitle/Subtitle 3 - Medium */
-            font-family: $inter;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 138%; /* 22.08px */
+            font-family: abs.$inter;
+            @include abs.fontConfig(16px, normal, 500, 138%);
             letter-spacing: -0.8px;
           }
 
@@ -780,13 +522,28 @@ header {
             }
 
             .heart:hover {
-              background-color: rgb(243, 77, 77);
+              background-color: rgb(243, 243, 243);
+
+              img {
+                filter: invert(32%) sepia(81%) saturate(7479%)
+                  hue-rotate(356deg) brightness(90%) contrast(130%);
+              }
             }
             .download:hover {
-              background-color: rgb(15, 185, 15);
+              background-color: rgb(243, 243, 243);
+
+              img {
+                filter: invert(17%) sepia(83%) saturate(6951%)
+                  hue-rotate(106deg) brightness(107%) contrast(105%);
+              }
             }
             .more:hover {
-              background-color: gray;
+              background-color: rgb(243, 243, 243);
+
+              img {
+                filter: invert(75%) sepia(35%) saturate(5822%) hue-rotate(0deg)
+                  brightness(103%) contrast(105%);
+              }
             }
           }
         }
@@ -794,24 +551,18 @@ header {
     }
 
     .see-all {
-      color: #0432df;
+      color: abs.$deep-blue;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $poppins;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 24px;
+      font-family: abs.$poppins;
+      @include abs.fontConfig(14px, normal, 600, 24px);
       letter-spacing: -0.14px;
     }
 
     .see-all:visited {
-      color: #0432df;
+      color: abs.$deep-blue;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $poppins;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 24px;
+      font-family: abs.$poppins;
+      @include abs.fontConfig(14px, normal, 600, 24px);
       letter-spacing: -0.14px;
     }
   }
@@ -827,15 +578,12 @@ header {
   gap: 23px;
 
   h2 {
-    color: #020d37;
+    color: abs.$dark-blue;
     text-align: center;
     font-feature-settings: "salt" on, "liga" off;
-
-    font-family: $poppins;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 45px;
+    margin: 0px;
+    font-family: abs.$poppins;
+    @include abs.fontConfig(28px, normal, 600, 45px);
     letter-spacing: -0.56px;
   }
 
@@ -847,173 +595,155 @@ header {
     gap: 20px;
 
     .items {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
       width: 100%;
       gap: 16px;
 
-      .items-group {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+      a {
         width: 100%;
-        // gap: 20px;
+        height: 106px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-decoration: none;
 
-        .item {
-          width: 157px;
-          height: 117px;
-          border-radius: 8px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          text-decoration: none;
-
-          p {
-            color: #eee;
-            text-align: center;
-            font-feature-settings: "salt" on, "liga" off;
-            font-family: $inter;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 172%;
-            letter-spacing: -0.9px;
-          }
-        }
-
-        .musical {
-          background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.5) 0%,
-              rgba(0, 0, 0, 0.5) 100%
-            ),
-            url(./public/images/musical.png), lightgray 50% / cover no-repeat;
-        }
-
-        .industrial {
-          background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.5) 0%,
-              rgba(0, 0, 0, 0.5) 100%
-            ),
-            url(./public/images/industrial.png), lightgray 50% / cover no-repeat;
-        }
-
-        .movie-sounds {
-          background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.5) 0%,
-              rgba(0, 0, 0, 0.5) 100%
-            ),
-            url(./public/images/movie-sounds.png),
-            lightgray 50% / cover no-repeat;
-        }
-
-        .animal {
-          background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.5) 0%,
-              rgba(0, 0, 0, 0.5) 100%
-            ),
-            url(./public/images/animal.png), lightgray 50% / cover no-repeat;
-        }
-
-        .people {
-          background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.5) 0%,
-              rgba(0, 0, 0, 0.5) 100%
-            ),
-            url(./public/images/people.png), lightgray 50% / cover no-repeat;
-        }
-
-        .vehicles {
-          background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.5) 0%,
-              rgba(0, 0, 0, 0.5) 100%
-            ),
-            url(./public/images/vehicles.png), lightgray 50% / cover no-repeat;
-        }
-
-        .sound-designs {
-          background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.5) 0%,
-              rgba(0, 0, 0, 0.5) 100%
-            ),
-            url(./public/images/sound-designs.png),
-            lightgray 50% / cover no-repeat;
-        }
-
-        .emergency {
-          background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.5) 0%,
-              rgba(0, 0, 0, 0.5) 100%
-            ),
-            url(./public/images/emergency.png), lightgray 50% / cover no-repeat;
-        }
-
-        .bell {
-          background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.5) 0%,
-              rgba(0, 0, 0, 0.5) 100%
-            ),
-            url(./public/images/bell.png), lightgray 50% / cover no-repeat;
-        }
-
-        .nature {
-          background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.5) 0%,
-              rgba(0, 0, 0, 0.5) 100%
-            ),
-            url(./public/images/nature.png), lightgray 50% / cover no-repeat;
-        }
-
-        .cartoon {
-          background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.5) 0%,
-              rgba(0, 0, 0, 0.5) 100%
-            ),
-            url(./public/images/cartoon.png), lightgray 50% / cover no-repeat;
-        }
-
-        .horror {
-          background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.5) 0%,
-              rgba(0, 0, 0, 0.5) 100%
-            ),
-            url(./public/images/horror.png), lightgray 50% / cover no-repeat;
+        p {
+          color: abs.$pale-gray;
+          text-align: center;
+          font-feature-settings: "salt" on, "liga" off;
+          font-family: abs.$inter;
+          @include abs.fontConfig(18px, normal, 600, 172%);
+          letter-spacing: -0.9px;
         }
       }
 
-      .see-all {
-        color: #0432df;
-        font-feature-settings: "salt" on, "liga" off;
-        font-family: $poppins;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 24px;
-        letter-spacing: -0.14px;
+      .musical {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url(./public/images/musical.png), lightgray 50% / cover no-repeat;
       }
 
-      .see-all:visited {
-        color: #0432df;
-        font-feature-settings: "salt" on, "liga" off;
-        font-family: $poppins;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 24px;
-        letter-spacing: -0.14px;
+      .industrial {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url(./public/images/industrial.png), lightgray 50% / cover no-repeat;
       }
+
+      .movie-sounds {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url(./public/images/movie-sounds.png), lightgray 50% / cover no-repeat;
+      }
+
+      .animal {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url(./public/images/animal.png), lightgray 50% / cover no-repeat;
+      }
+
+      .people {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url(./public/images/people.png), lightgray 50% / cover no-repeat;
+      }
+
+      .vehicles {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url(./public/images/vehicles.png), lightgray 50% / cover no-repeat;
+      }
+
+      .sound-designs {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url(./public/images/sound-designs.png),
+          lightgray 50% / cover no-repeat;
+      }
+
+      .emergency {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url(./public/images/emergency.png), lightgray 50% / cover no-repeat;
+      }
+
+      .bell {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url(./public/images/bell.png), lightgray 50% / cover no-repeat;
+      }
+
+      .nature {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url(./public/images/nature.png), lightgray 50% / cover no-repeat;
+      }
+
+      .cartoon {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url(./public/images/cartoon.png), lightgray 50% / cover no-repeat;
+      }
+
+      .horror {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url(./public/images/horror.png), lightgray 50% / cover no-repeat;
+      }
+      // }
+    }
+
+    .see-all {
+      color: abs.$deep-blue;
+      font-feature-settings: "salt" on, "liga" off;
+      font-family: abs.$poppins;
+      @include abs.fontConfig(14px, normal, 600, 24px);
+      letter-spacing: -0.14px;
+    }
+
+    .see-all:visited {
+      color: abs.$deep-blue;
+      font-feature-settings: "salt" on, "liga" off;
+      font-family: abs.$poppins;
+      @include abs.fontConfig(14px, normal, 600, 24px);
+      letter-spacing: -0.14px;
     }
   }
 }
@@ -1024,7 +754,7 @@ header {
   width: inherit;
   justify-content: center;
   align-items: flex-start;
-  gap: 105px;
+  gap: 5%;
 
   .text {
     display: flex;
@@ -1033,26 +763,20 @@ header {
     gap: 17px;
 
     h4 {
-      color: #f59e00;
+      color: abs.$brave-yellow;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: Poppins;
-      font-size: 14px;
-      font-style: $poppins;
-      font-weight: 600;
-      line-height: 14px;
+      font-family: abs.$poppins;
+      @include abs.fontConfig(14px, normal, 600, 14px);
       text-transform: uppercase;
       margin: 0px;
     }
 
     h2 {
       width: 337px;
-      color: #020d37;
+      color: abs.$dark-blue;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $poppins;
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 45px;
+      font-family: abs.$poppins;
+      @include abs.fontConfig(28px, normal, 600, 45px);
       letter-spacing: -0.56px;
       margin: 0px;
     }
@@ -1091,25 +815,19 @@ header {
 
           h5 {
             align-self: stretch;
-            color: #020d37;
+            color: abs.$dark-blue;
             font-feature-settings: "salt" on, "liga" off;
-            font-family: $inter;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 172%;
+            font-family: abs.$inter;
+            @include abs.fontConfig(18px, normal, 600, 172%);
             letter-spacing: -0.9px;
             margin: 0px;
           }
 
           p {
-            color: #4c526a;
+            color: abs.$description-dark;
             font-feature-settings: "salt" on, "liga" off;
-            font-family: $inter;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 172%;
+            font-family: abs.$inter;
+            @include abs.fontConfig(14px, normal, 500, 172%);
             margin: 0px;
           }
         }
@@ -1124,29 +842,23 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #0432df;
+  background: abs.$deep-blue;
   padding: 65px 0 69px 0;
 
   h1 {
-    color: #fff;
+    color: white;
     font-feature-settings: "salt" on, "liga" off;
-    font-family: $poppins;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 146.5%;
+    font-family: abs.$poppins;
+    @include abs.fontConfig(36px, normal, 700, 146.5%);
     letter-spacing: -0.72px;
     margin: 0px;
   }
 
   p {
-    color: #eee;
+    color: abs.$pale-gray;
     font-feature-settings: "salt" on, "liga" off;
-    font-family: Inter;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 189%;
+    font-family: abs.$inter;
+    @include abs.fontConfig(18px, normal, 500, 189%);
     letter-spacing: -0.9px;
     margin: 14px 0px 0px 0px;
   }
@@ -1173,43 +885,34 @@ header {
         }
 
         h2 {
-          color: #fff;
+          color: white;
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $poppins;
-          font-size: 28px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 45px;
+          font-family: abs.$poppins;
+          @include abs.fontConfig(28px, normal, 600, 45px);
           letter-spacing: -0.56px;
         }
 
         .description {
-          color: #eee;
+          color: abs.$pale-gray;
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $inter;
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: 172%;
+          font-family: abs.$inter;
+          @include abs.fontConfig(18px, normal, 300, 172%);
           letter-spacing: -0.9px;
         }
 
         .price {
-          color: #fff;
+          color: white;
 
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $inter;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 170%;
+          font-family: abs.$inter;
+          @include abs.fontConfig(20px, normal, 500, 170%);
           letter-spacing: -1px;
         }
       }
     }
 
     .basic {
-      border: 1px solid #cdd6f9;
+      border: 1px solid abs.$deep-blue-saturation;
 
       .bottom {
         a {
@@ -1219,29 +922,26 @@ header {
           justify-content: center;
           align-items: center;
           gap: 10px;
-          border: 2px solid #fff;
-          color: #fff;
+          border: 2px solid white;
+          color: white;
           text-align: center;
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $poppins;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 24px;
+          font-family: abs.$poppins;
+          @include abs.fontConfig(16px, normal, 600, 24px);
           letter-spacing: -0.16px;
           text-decoration: none;
           margin-top: 8px;
         }
 
         a:hover {
-          background: #fff;
-          color: #0432df;
+          background: white;
+          color: abs.$deep-blue;
         }
       }
     }
 
     .premium {
-      background: #1b4bff;
+      background: abs.$bright-blue;
 
       .bottom {
         a {
@@ -1251,15 +951,12 @@ header {
           justify-content: center;
           align-items: center;
           gap: 10px;
-          background: #fff;
-          color: #0432df;
+          background: white;
+          color: abs.$deep-blue;
           text-align: center;
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $poppins;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 24px;
+          font-family: abs.$poppins;
+          @include abs.fontConfig(16px, normal, 600, 24px);
           letter-spacing: -0.16px;
           text-decoration: none;
           margin-top: 8px;
@@ -1267,8 +964,8 @@ header {
 
         a:hover {
           color: white;
-          background-color: #1b4bff;
-          border: 2px solid #fff;
+          background-color: abs.$bright-blue;
+          border: 2px solid white;
           border-radius: 8px;
           padding: 12.5px 22.5px;
         }
@@ -1293,25 +990,19 @@ header {
     gap: 20px;
 
     h6 {
-      color: #f59e00;
+      color: abs.$brave-yellow;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: Poppins;
-      font-size: 14px;
-      font-style: $poppins;
-      font-weight: 600;
-      line-height: 14px;
+      font-family: abs.$poppins;
+      @include abs.fontConfig(14px, normal, 600, 14px);
       text-transform: uppercase;
       margin: 0px;
     }
 
     h3 {
-      color: #020d37;
+      color: abs.$dark-blue;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $poppins;
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 45px;
+      font-family: abs.$poppins;
+      @include abs.fontConfig(28px, normal, 600, 45px);
       letter-spacing: -0.56px;
       margin: 0px;
     }
@@ -1336,8 +1027,8 @@ header {
         align-items: center;
         gap: 10px;
         border-radius: 8px;
-        border: 1px solid #eee;
-        background: #fff;
+        border: 1px solid abs.$pale-gray;
+        background: white;
 
         .double-quote {
           width: 40px;
@@ -1345,14 +1036,11 @@ header {
         }
 
         .text {
-          color: #4c526a;
+          color: abs.$description-dark;
           text-align: center;
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $inter;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 172%;
+          font-family: abs.$inter;
+          @include abs.fontConfig(14px, normal, 500, 172%);
           margin: 0px;
         }
 
@@ -1370,28 +1058,22 @@ header {
 
           h6 {
             align-self: stretch;
-            color: #020d37;
+            color: abs.$dark-blue;
             text-align: center;
             font-feature-settings: "salt" on, "liga" off;
-            font-family: $inter;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 172%;
+            font-family: abs.$inter;
+            @include abs.fontConfig(18px, normal, 600, 172%);
             letter-spacing: -0.9px;
             margin: 0px;
           }
 
           p {
             align-self: stretch;
-            color: #acafb8;
+            color: abs.$description-light;
             text-align: center;
             font-feature-settings: "salt" on, "liga" off;
-            font-family: $inter;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 172%;
+            font-family: abs.$inter;
+            @include abs.fontConfig(14px, normal, 500, 172%);
             margin: 0px;
           }
         }
@@ -1403,12 +1085,11 @@ header {
 footer {
   display: flex;
   width: inherit;
-  height: 295px;
   padding: 50px 100px;
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
-  background: #020d37;
+  background: abs.$dark-blue;
 
   .info {
     display: flex;
@@ -1423,25 +1104,19 @@ footer {
     }
 
     .text {
-      color: #acafb8;
+      color: abs.$description-light;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $inter;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 180%;
+      font-family: abs.$inter;
+      @include abs.fontConfig(16px, normal, 400, 180%);
       letter-spacing: -0.8px;
       margin: 0px;
     }
 
     .copyright {
-      color: #acafb8;
+      color: abs.$description-light;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $inter;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 172%;
+      font-family: abs.$inter;
+      @include abs.fontConfig(14px, normal, 500, 172%);
       margin: 5px 0px 0px 0px;
     }
   }
@@ -1455,13 +1130,10 @@ footer {
 
     h6 {
       margin: 0px;
-      color: #eee;
+      color: abs.$pale-gray;
       font-feature-settings: "salt" on, "liga" off;
-      font-family: $inter;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 172%;
+      font-family: abs.$inter;
+      @include abs.fontConfig(18px, normal, 600, 172%);
       letter-spacing: -0.9px;
     }
 
@@ -1476,13 +1148,10 @@ footer {
 
       li {
         a {
-          color: #acafb8;
+          color: abs.$description-light;
           font-feature-settings: "salt" on, "liga" off;
-          font-family: $inter;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 180%;
+          font-family: abs.$inter;
+          @include abs.fontConfig(16px, normal, 400, 180%);
           letter-spacing: -0.8px;
           text-decoration: none;
         }
@@ -1493,5 +1162,565 @@ footer {
         }
       }
     }
+  }
+}
+
+// Tablet
+@media (max-width: 992px) {
+  header {
+    .header-content {
+      text-align: center;
+      .paragraph1 {
+        @include abs.fontConfig(18px, normal, 500, 172%);
+        letter-spacing: -0.9px;
+      }
+
+      h1 {
+        width: 80%;
+      }
+    }
+
+    .nav-container {
+      width: 85%;
+
+      nav {
+        height: 65px;
+
+        .nav-right {
+          ul {
+            display: none;
+          }
+
+          .login-btn {
+            display: none;
+          }
+
+          .menu-btn {
+            display: block;
+            width: 48px;
+            height: 48px;
+          }
+        }
+      }
+    }
+  }
+
+  .trusted {
+    .trusted-icons {
+      width: 90%;
+      .dudeperfect,
+      .pewdiepie {
+        width: 40px;
+        height: 40px;
+      }
+
+      .mr-beast {
+        width: 62.741px;
+        height: 44px;
+      }
+
+      .wb {
+        width: 40px;
+        height: 49.6px;
+      }
+
+      .netflix {
+        width: 80px;
+        height: 21.277px;
+      }
+
+      .pixar {
+        width: 90px;
+        height: 17.252px;
+      }
+
+      .picky-picks {
+        width: 41.481px;
+        height: 41.481px;
+      }
+    }
+  }
+
+  .best-sounds {
+    width: 90%;
+
+    .text {
+      h3 {
+        font-size: 24px;
+      }
+    }
+
+    .list {
+      .filter {
+        .categories {
+          ul {
+            gap: 18px;
+            li {
+              a {
+                @include abs.fontConfig(14px, normal, 500, 138%);
+                letter-spacing: -0.7px;
+              }
+            }
+          }
+        }
+
+        .button {
+          width: 96px;
+          padding: 2px 14px 2px 20px;
+          gap: 16px;
+
+          p {
+            @include abs.fontConfig(14px, normal, 500, 138%);
+            letter-spacing: -0.7px;
+          }
+
+          img {
+            width: 36px;
+            height: 36px;
+          }
+        }
+      }
+
+      .list-items {
+        .item-container {
+          .item {
+            .name-time-container {
+              .name {
+                @include abs.fontConfig(14px, normal, 500, 138%);
+                letter-spacing: -0.7px;
+              }
+            }
+
+            .categories {
+              @include abs.fontConfig(14px, normal, 500, 138%);
+              letter-spacing: -0.7px;
+            }
+
+            .description {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .category {
+    h2 {
+      @include abs.fontConfig(24px, normal, 600, 160%);
+      letter-spacing: -0.48px;
+    }
+
+    .list {
+      .items {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+  }
+
+  .why-us {
+    flex-direction: column;
+    gap: 41px;
+
+    .text {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      h4,
+      h2 {
+        margin: 0px auto;
+        width: 100%;
+        text-align: center;
+      }
+
+      h2 {
+        @include abs.fontConfig(24px, normal, 600, 160%);
+        letter-spacing: -0.48px;
+      }
+    }
+
+    .reasons {
+      width: 100%;
+      justify-content: space-between;
+      gap: 110px;
+
+      .vertical {
+        .reason {
+          width: inherit;
+        }
+      }
+    }
+  }
+
+  .pricing {
+    h1 {
+      @include abs.fontConfig(28px, normal, 600, 45px);
+      letter-spacing: -0.56px;
+    }
+
+    .plans {
+      .plan {
+        .top {
+          h2 {
+            @include abs.fontConfig(24px, normal, 600, 160%);
+            letter-spacing: -0.48px;
+          }
+
+          p {
+            @include abs.fontConfig(16px, normal, 500, 138%);
+            letter-spacing: -0.8px;
+          }
+        }
+
+        .bottom {
+          .price {
+            @include abs.fontConfig(18px, normal, 600, 172%);
+            letter-spacing: -0.9px;
+          }
+
+          a {
+            padding: 10px 20px;
+          }
+        }
+      }
+
+      .premium {
+        .bottom {
+          a:hover {
+            padding: 8.4px 18.4px;
+          }
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    .title {
+      text-align: center;
+    }
+
+    .testimonies {
+      .group {
+        .item-3 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+
+    .info {
+      width: 259px;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      margin-bottom: 40px;
+
+      img {
+        width: 142px;
+        height: 21px;
+      }
+
+      p {
+        @include abs.fontConfig(14px, normal, 400, 172%);
+        letter-spacing: -0.7px;
+      }
+    }
+
+    nav {
+      h6 {
+        @include abs.fontConfig(16px, normal, 600, 138%);
+      }
+
+      ul {
+        li {
+          a {
+            @include abs.fontConfig(14px, normal, 400, 172%);
+            letter-spacing: -0.7px;
+          }
+        }
+      }
+    }
+  }
+
+  footer:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  footer:nth-child(3) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  footer:nth-child(4) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+}
+
+// Phone
+@media (max-width: 600px) {
+  header {
+    .nav-container {
+      nav {
+        .nav-right {
+          .menu-btn {
+            img {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+
+    .header-content {
+      h1 {
+        width: 95%;
+        @include abs.fontConfig(20px, normal, 600, 30px);
+        letter-spacing: -0.4px;
+      }
+
+      .paragraph1 {
+        width: 95%;
+        @include abs.fontConfig(16px, normal, 600, 138%);
+      }
+
+      .search-bar {
+        width: 95%;
+        input {
+          width: calc(100% - 50px);
+          height: 44px;
+        }
+
+        img {
+          top: 14px;
+        }
+      }
+
+      .paragraph2 {
+        width: 95%;
+      }
+
+      .hint {
+        width: 90%;
+      }
+    }
+  }
+
+  .trusted {
+    padding-bottom: 100px;
+
+    .text {
+      p {
+        @include abs.fontConfig(18px, normal, 600, 172%);
+        letter-spacing: -0.9px;
+      }
+    }
+
+    .trusted-icons {
+      position: relative;
+
+      .netflix,
+      .pixar,
+      .picky-picks {
+        position: absolute;
+      }
+
+      .netflix {
+        bottom: -56px;
+        left: 0;
+      }
+
+      .pixar {
+        bottom: -56px;
+        left: calc(50% - 25px);
+      }
+
+      .picky-picks {
+        bottom: -60px;
+        right: 0;
+      }
+    }
+  }
+
+  .best-sounds {
+    width: auto;
+    margin: 50px 16px;
+    .list {
+      .filter {
+        .categories {
+          ul {
+            li:nth-child(4),
+            li:nth-child(5),
+            li:nth-child(6) {
+              display: none;
+            }
+          }
+        }
+        .button {
+          padding: 0px;
+          margin: 0px;
+          width: 36px;
+          height: 36px;
+
+          p {
+            display: none;
+          }
+        }
+      }
+
+      .list-items {
+        .item-container {
+          .item {
+            gap: 5%;
+            .name-time-container {
+              width: 60%;
+            }
+
+            .categories {
+              display: none;
+            }
+
+            .btn-group {
+              .heart,
+              .more {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .category {
+    width: auto;
+    margin: 60px 16px;
+
+    h2 {
+      @include abs.fontConfig(20px, normal, 600, 30px);
+      letter-spacing: -0.4px;
+    }
+
+    .list {
+      .items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        a {
+          height: 70px;
+          @include abs.fontConfig(16px, normal, 600, 138%);
+        }
+      }
+    }
+  }
+
+  .why-us {
+    width: auto;
+    padding: 60px 16px 100px 16px;
+
+    .text {
+      h2 {
+        @include abs.fontConfig(24px, normal, 600, 160%);
+        letter-spacing: -0.48px;
+      }
+    }
+
+    .reasons {
+      flex-direction: column;
+
+      .vertical {
+        width: 90%;
+        align-self: center;
+
+        .reason {
+          margin: 0 auto;
+
+          .text {
+            h5 {
+              @include abs.fontConfig(16px, normal, 600, 138%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .pricing {
+    h1 {
+      width: 90%;
+      @include abs.fontConfig(24px, normal, 700, 160%);
+      letter-spacing: -0.48px;
+      text-align: center;
+    }
+
+    p {
+      @include abs.fontConfig(16px, normal, 500, 180%);
+    }
+
+    .plans {
+      flex-direction: column;
+
+      .plan {
+        max-width: 95%;
+
+        .top {
+          h2 {
+            @include abs.fontConfig(20px, normal, 600, 30px);
+            letter-spacing: -0.4px;
+          }
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    padding: 60px 0 140px 0;
+
+    .title {
+      h3 {
+        width: 85%;
+        @include abs.fontConfig(20px, normal, 600, 30px);
+        letter-spacing: -0.4px;
+      }
+    }
+
+    .testimonies {
+      .group {
+        .item-1 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: 50px 5%;
+    grid-template-columns: repeat(2, auto);
+    row-gap: 16px;
+
+    .info {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
+  footer:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  footer:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  footer:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 }

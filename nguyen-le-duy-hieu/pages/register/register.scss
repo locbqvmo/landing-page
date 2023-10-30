@@ -39,8 +39,10 @@ body {
       .login_wrapper_upper_img {
         width: 175px;
         height: 51px;
-        background-image: url("../../images/instagram_label.png");
-        background-position: center 129px;
+        background-image: url("../../images/logo.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
       }
     }
 
@@ -78,7 +80,7 @@ body {
         flex-direction: column;
 
         .login_btn {
-          background-color: abs.$background_sky_color;
+          background-color: abs.$primary_link_color;
           width: 100%;
 
           button {
@@ -87,8 +89,13 @@ body {
             font-size: 0.875rem;
             color: abs.$primary_white_color;
             width: 100%;
-            background-color: abs.$background_sky_color;
+            background-color: abs.$primary_link_color;
             cursor: pointer;
+            transition: all 0.3s;
+          }
+
+          button:hover {
+            background-color: abs.$background_sky_color;
           }
         }
 

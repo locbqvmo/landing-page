@@ -73,7 +73,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -311,29 +312,30 @@ template {
 }
 
 * {
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   background: linear-gradient(0deg, rgba(2, 13, 55, 0.7) 0%, rgba(2, 13, 55, 0.7) 100%), url("./public/images/pawel-czerwinski-eyb-m-9-n-4-yrp-e-unsplash-2.png"), lightgray 0px 0px/100% 100% no-repeat;
+}
+body .register-form {
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-body .register-form {
+body .register-form form {
+  text-align: center;
   background-color: white;
   border-radius: 10px;
   padding: 40px 40px;
   width: 300px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-}
-body .register-form form {
-  text-align: center;
 }
 body .register-form form .logo img {
   filter: brightness(0) saturate(100%) invert(0%) sepia(4%) hue-rotate(227deg) contrast(100%);
@@ -342,7 +344,7 @@ body .register-form form .logo img {
 }
 body .register-form form h1 {
   color: #333;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -351,7 +353,7 @@ body .register-form form h1 {
 }
 body .register-form form p {
   color: #333;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -370,7 +372,7 @@ body .register-form form .username .username-icon, body .register-form form .use
   height: 24px;
   position: absolute;
   top: 10px;
-  left: 15px;
+  left: 36px;
 }
 body .register-form form .username input, body .register-form form .email input {
   width: 200px;
@@ -392,10 +394,10 @@ body .register-form form .password .password-icon, body .register-form form .re-
   height: 24px;
   position: absolute;
   top: 10px;
-  left: 15px;
+  left: 36px;
 }
 body .register-form form .password input, body .register-form form .re-password input {
-  width: 155px;
+  width: 160px;
   height: 36px;
   padding: 5px;
   font-size: 11pt;
@@ -410,7 +412,7 @@ body .register-form form .password input, body .register-form form .re-password 
 body .register-form form .password button, body .register-form form .re-password button {
   position: absolute;
   top: 10px;
-  right: 20px;
+  right: 32px;
   border: none;
 }
 body .register-form form .password button img, body .register-form form .re-password button img {
@@ -422,8 +424,9 @@ body .register-form form .re-password input {
 }
 body .register-form form .register-btn {
   color: white;
-  background-color: #0575e6;
-  font-family: Poppins;
+  border: 1px solid #0432DF;
+  background: #0432DF;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -432,4 +435,15 @@ body .register-form form .register-btn {
   border-radius: 15px;
   text-decoration: none;
   margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  body {
+    background: white;
+  }
+  body .register-form {
+    width: 100%;
+    border-radius: 0px !important;
+    margin: 0;
+  }
 }/*# sourceMappingURL=register.css.map */
